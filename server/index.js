@@ -17,9 +17,10 @@ app.use(express.static(path.join(__dirname, "../client")));
 const bookingsFile = path.join(__dirname, "bookings.json");
 
 // Route: Serve index.html from client
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/index.html"));
+app.get('/', (req, res) => {
+  res.send('✅ Intellex Backend is running. No frontend served from here.');
 });
+
 
 // Route: Serve admin.html
 app.get("/admin", (req, res) => {

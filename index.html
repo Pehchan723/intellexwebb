@@ -44,7 +44,7 @@
         </div>
       </div>
     </section>
-<form action="http://localhost:5000/submit-booking" method="POST">
+<form action="http://adventurous-courage-production.up.railway.app" method="POST">
   <input type="text" name="name" placeholder="Name" required>
   <input type="email" name="email" placeholder="Email" required>
   <input type="text" name="service" placeholder="Service" required>
@@ -67,7 +67,7 @@
       message: document.getElementById('message').value,
     };
 
-    const res = await fetch('http://localhost:5000/booking', {
+    const res = await fetch('http://adventurous-courage-production.up.railway.app', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellex - Digital Marketing</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Intellex</h1>
+      <nav>
+        <a href="#services" class="mx-2 hover:underline">Services</a>
+        <a href="#contact" class="mx-2 hover:underline">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-gray-100">
+      <h2 class="text-4xl font-bold mb-4">Grow Your Business with Intellex</h2>
+      <p class="text-lg mb-6">Professional digital marketing services that drive results.</p>
+      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800">Get in Touch</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Our Services</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-xl font-bold mb-2">SEO Optimization</h4>
+          <p>Boost your search engine visibility and traffic.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-xl font-bold mb-2">Social Media Marketing</h4>
+          <p>Engage your audience with tailored social campaigns.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h4 class="text-xl font-bold mb-2">Web Development</h4>
+          <p>Professional websites optimized for performance.</p>
+        </div>
+      </div>
+    </section>
+<form action="http://localhost:5000/submit-booking" method="POST">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="service" placeholder="Service" required>
+  <textarea name="message" placeholder="Message"></textarea>
+  <button type="submit">Book Now</button>
+</form>
+
+
+<!-- JS to handle form -->
+<script>
+  const form = document.getElementById('bookingForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      service: document.getElementById('service').value,
+      message: document.getElementById('message').value,
+    };
+
+    const res = await fetch('http://localhost:5000/booking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  });
+</script>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-16 px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Contact Us</h3>
+      <form class="max-w-xl mx-auto bg-white p-8 rounded shadow">
+        <input type="text" placeholder="Your Name" class="w-full mb-4 p-2 border border-gray-300 rounded" required />
+        <input type="email" placeholder="Your Email" class="w-full mb-4 p-2 border border-gray-300 rounded" required />
+        <textarea placeholder="Your Message" rows="5" class="w-full mb-4 p-2 border border-gray-300 rounded" required></textarea>
+        <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 w-full">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white text-center p-4">
+      &copy; 2025 Intellex. All rights reserved.
+    </footer>
+    <script>
+document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch('http://localhost:5000/api/book', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    document.getElementById('responseMsg').innerText = result.message || 'Sent!';
+    form.reset();
+  } catch (err) {
+    document.getElementById('responseMsg').innerText = 'Something went wrong.';
+    console.error(err);
+  }
+});
+</script>
+
+    
+  </body>
+</html>

@@ -2,11 +2,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
+const cors = require("cors"); // ✅ NEW
 
 const app = express();
 const PORT = 5000;
 
 // Middlewares
+app.use(cors()); // ✅ NEW
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -20,7 +22,6 @@ const bookingsFile = path.join(__dirname, "bookings.json");
 app.get('/', (req, res) => {
   res.send('✅ Intellex Backend is running. No frontend served from here.');
 });
-
 
 // Route: Serve admin.html
 app.get("/admin", (req, res) => {

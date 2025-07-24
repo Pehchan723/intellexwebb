@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,6 +148,7 @@
             flex-direction: column;
             cursor: pointer;
             gap: 4px;
+            z-index: 1001;
         }
         
         .hamburger-line {
@@ -424,6 +424,62 @@
             margin-bottom: 1.5rem;
         }
         
+        /* Service Detail Sections */
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .service-detail-content h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-detail-content p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-detail-content ul {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-detail-content ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        .service-detail-visual {
+            text-align: center;
+        }
+        
+        .service-detail-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-detail-card > div:first-child {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-detail-card h4 {
+            margin-bottom: 1rem;
+        }
+        
+        .service-detail-card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
         /* Contact Form Styles */
         .contact-section {
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 245, 0.05));
@@ -592,23 +648,47 @@
         
         /* Mobile Styles */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
             .nav-menu {
                 position: fixed;
-                top: 80px;
+                top: 0;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 80px);
+                height: 100vh;
                 background: rgba(0, 0, 0, 0.98);
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
-                padding-top: 2rem;
+                gap: 2rem;
                 transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 backdrop-filter: blur(20px);
+                z-index: 999;
             }
             
             .nav-menu.active {
                 left: 0;
+            }
+            
+            .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+                border-radius: 0;
+                width: 100%;
+            }
+            
+            .quote-btn {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                margin-top: 1rem;
             }
             
             .mobile-menu-toggle {
@@ -627,96 +707,238 @@
                 transform: rotate(-45deg) translate(7px, -6px);
             }
             
+            .dropdown {
+                width: 100%;
+            }
+            
             .dropdown-content {
                 position: static;
                 display: block;
                 background: rgba(255, 255, 255, 0.05);
                 margin-top: 1rem;
                 border-radius: 8px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .dropdown-item {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.6rem;
             }
             
             .hero {
                 padding-top: 100px;
+                min-height: 100vh;
             }
             
             .hero-content {
-                padding: 2rem;
+                padding: 2rem 1.5rem;
                 margin: 1rem;
+            }
+            
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                margin-bottom: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 3rem;
+            }
+            
+            .btn-primary, 
+            .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                padding: 1.2rem 2rem;
+                font-size: 1rem;
             }
             
             .client-logos-container {
                 overflow: visible;
                 height: auto;
+                mask: none;
             }
             
             .client-logos {
                 justify-content: center;
-                gap: 1.5rem;
+                gap: 1rem;
                 flex-wrap: wrap;
                 animation: none;
                 width: 100%;
             }
             
             .client-logo {
-                padding: 1rem 2rem;
-                font-size: 0.9rem;
-                min-width: 120px;
+                padding: 0.8rem 1.5rem;
+                font-size: 0.8rem;
+                min-width: auto;
+                flex: 0 0 auto;
             }
             
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .section {
+                padding: 3rem 0;
             }
             
-            .btn-primary, .btn-secondary {
-                width: 100%;
-                max-width: 280px;
+            .section-title {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+                margin-bottom: 2rem;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
-            }
-            
-            .form-container {
-                padding: 2rem;
-                margin: 0 1rem;
-            }
-            
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-        
-        /* Small mobile styles */
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-            
-            .hero {
-                padding-top: 120px;
-            }
-            
-            .hero-content {
-                padding: 1.5rem;
+                margin-top: 2rem;
             }
             
             .service-card {
+                padding: 1.2rem;
+            }
+            
+            .service-icon {
+                font-size: 2rem;
+            }
+            
+            .service-title {
+                font-size: 1.2rem;
+            }
+            
+            .service-description {
+                font-size: 0.9rem;
+            }
+            
+            .service-detail-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .service-detail-content p,
+            .service-detail-content ul {
+                font-size: 0.9rem;
+            }
+            
+            .service-detail-card {
                 padding: 1.5rem;
+            }
+            
+            .service-detail-card > div:first-child {
+                font-size: 2.5rem;
             }
             
             .form-container {
                 padding: 1.5rem;
+            }
+            
+            .form-label {
+                font-size: 0.85rem;
+            }
+            
+            .form-input,
+            .form-textarea,
+            .form-select {
+                padding: 0.8rem;
+                font-size: 16px;
+            }
+            
+            .submit-btn {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+            
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 360px) {
+            .hero-content {
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+            
+            .hero-title {
+                font-size: clamp(1.6rem, 10vw, 2.2rem);
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(0.85rem, 4vw, 1rem);
+            }
+            
+            .btn-primary, 
+            .btn-secondary {
+                padding: 0.9rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .client-logo {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.65rem;
+            }
+            
+            .service-card {
+                padding: 1rem;
+            }
+            
+            .form-container {
+                padding: 1rem;
+                margin: 0 0.5rem;
+            }
+        }
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .nav-link,
+            .dropdown-item,
+            .btn-primary,
+            .btn-secondary,
+            .btn-learn-more,
+            .quote-btn,
+            .submit-btn,
+            .social-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .service-card:hover {
+                transform: none;
+            }
+            
+            .service-card:active {
+                transform: scale(0.98);
+            }
+            
+            .btn-primary:hover,
+            .btn-secondary:hover,
+            .btn-learn-more:hover,
+            .quote-btn:hover,
+            .submit-btn:hover {
+                transform: none;
+            }
+            
+            .btn-primary:active,
+            .btn-secondary:active,
+            .btn-learn-more:active,
+            .quote-btn:active,
+            .submit-btn:active {
+                transform: scale(0.95);
             }
         }
     </style>
@@ -832,7 +1054,7 @@
                     <p class="service-description">Intelligent conversational AI solutions that enhance customer engagement and automate support processes.</p>
                     <a href="services.html#ai-chatbots" class="btn-learn-more">Learn More</a>
                 </div>
-              
+            </div>
         </div>
     </section>
 
@@ -840,23 +1062,23 @@
     <section id="web-dev" class="section" style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.02), rgba(0, 0, 0, 0.95));">
         <div class="container">
             <h2 class="section-title">Web Development</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem;">
-                <div>
-                    <h3 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; margin-bottom: 1.5rem; color: #00f5ff;">Custom Web Solutions</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem;">We create modern, responsive websites that not only look stunning but perform exceptionally. Our development process focuses on user experience, performance optimization, and scalability.</p>
-                    <ul style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
-                        <li style="margin-bottom: 0.5rem;">✓ Responsive Design for All Devices</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Fast Loading & SEO Optimized</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Custom CMS Integration</li>
-                        <li style="margin-bottom: 0.5rem;">✓ E-commerce Solutions</li>
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h3 style="color: #00f5ff;">Custom Web Solutions</h3>
+                    <p>We create modern, responsive websites that not only look stunning but perform exceptionally. Our development process focuses on user experience, performance optimization, and scalability.</p>
+                    <ul>
+                        <li>✓ Responsive Design for All Devices</li>
+                        <li>✓ Fast Loading & SEO Optimized</li>
+                        <li>✓ Custom CMS Integration</li>
+                        <li>✓ E-commerce Solutions</li>
                     </ul>
                     <a href="contact.html" class="btn-primary">Get Started</a>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">💻</div>
+                <div class="service-detail-visual">
+                    <div class="service-detail-card">
+                        <div>💻</div>
                         <h4 style="color: #00f5ff; margin-bottom: 1rem;">Technologies We Use</h4>
-                        <p style="color: rgba(255, 255, 255, 0.8);">React, Vue.js, Node.js, PHP, WordPress, Shopify, and more cutting-edge technologies.</p>
+                        <p>React, Vue.js, Node.js, PHP, WordPress, Shopify, and more cutting-edge technologies.</p>
                     </div>
                 </div>
             </div>
@@ -866,22 +1088,22 @@
     <section id="digital-marketing" class="section">
         <div class="container">
             <h2 class="section-title">Digital Marketing</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem;">
-                <div style="text-align: center;">
-                    <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">📈</div>
+            <div class="service-detail-grid">
+                <div class="service-detail-visual">
+                    <div class="service-detail-card">
+                        <div>📈</div>
                         <h4 style="color: #ff00f5; margin-bottom: 1rem;">Growth-Driven Results</h4>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Data-driven strategies that deliver measurable ROI and sustainable business growth.</p>
+                        <p>Data-driven strategies that deliver measurable ROI and sustainable business growth.</p>
                     </div>
                 </div>
-                <div>
-                    <h3 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; margin-bottom: 1.5rem; color: #ff00f5;">Comprehensive Marketing Solutions</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem;">From strategy to execution, we handle every aspect of your digital marketing needs. Our data-driven approach ensures maximum ROI and sustainable growth.</p>
-                    <ul style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
-                        <li style="margin-bottom: 0.5rem;">✓ Pay-Per-Click (PPC) Advertising</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Content Marketing Strategy</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Email Marketing Campaigns</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Analytics & Reporting</li>
+                <div class="service-detail-content">
+                    <h3 style="color: #ff00f5;">Comprehensive Marketing Solutions</h3>
+                    <p>From strategy to execution, we handle every aspect of your digital marketing needs. Our data-driven approach ensures maximum ROI and sustainable growth.</p>
+                    <ul>
+                        <li>✓ Pay-Per-Click (PPC) Advertising</li>
+                        <li>✓ Content Marketing Strategy</li>
+                        <li>✓ Email Marketing Campaigns</li>
+                        <li>✓ Analytics & Reporting</li>
                     </ul>
                     <a href="contact.html" class="btn-primary">Launch Campaign</a>
                 </div>
@@ -892,23 +1114,23 @@
     <section id="ai-chatbots" class="section" style="background: linear-gradient(135deg, rgba(255, 0, 245, 0.02), rgba(0, 0, 0, 0.95));">
         <div class="container">
             <h2 class="section-title">AI Chatbots</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem;">
-                <div>
-                    <h3 style="font-family: 'Orbitron', monospace; font-size: 1.8rem; margin-bottom: 1.5rem; color: #00f5ff;">Intelligent Customer Engagement</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem;">Deploy AI-powered chatbots that provide 24/7 customer support, lead generation, and personalized user experiences across all platforms.</p>
-                    <ul style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
-                        <li style="margin-bottom: 0.5rem;">✓ 24/7 Customer Support</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Lead Generation & Qualification</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Multi-Platform Integration</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Natural Language Processing</li>
+            <div class="service-detail-grid">
+                <div class="service-detail-content">
+                    <h3 style="color: #00f5ff;">Intelligent Customer Engagement</h3>
+                    <p>Deploy AI-powered chatbots that provide 24/7 customer support, lead generation, and personalized user experiences across all platforms.</p>
+                    <ul>
+                        <li>✓ 24/7 Customer Support</li>
+                        <li>✓ Lead Generation & Qualification</li>
+                        <li>✓ Multi-Platform Integration</li>
+                        <li>✓ Natural Language Processing</li>
                     </ul>
                     <a href="contact.html" class="btn-primary">Deploy AI Bot</a>
                 </div>
-                <div style="text-align: center;">
-                    <div style="background: rgba(255, 255, 255, 0.05); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🤖</div>
+                <div class="service-detail-visual">
+                    <div class="service-detail-card">
+                        <div>🤖</div>
                         <h4 style="color: #00f5ff; margin-bottom: 1rem;">Smart Automation</h4>
-                        <p style="color: rgba(255, 255, 255, 0.8);">Reduce response times by 90% and increase customer satisfaction with intelligent chatbot solutions.</p>
+                        <p>Reduce response times by 90% and increase customer satisfaction with intelligent chatbot solutions.</p>
                     </div>
                 </div>
             </div>
@@ -1087,7 +1309,8 @@
         
         function createParticles() {
             particles = [];
-            for (let i = 0; i < 80; i++) {
+            const particleCount = window.innerWidth < 768 ? 40 : 80; // Reduce particles on mobile
+            for (let i = 0; i < particleCount; i++) {
                 particles.push(new Particle());
             }
         }
@@ -1099,10 +1322,11 @@
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     
-                    if (distance < 150) {
-                        const opacity = (150 - distance) / 150 * 0.2;
+                    const maxDistance = window.innerWidth < 768 ? 100 : 150; // Reduce connection distance on mobile
+                    if (distance < maxDistance) {
+                        const opacity = (maxDistance - distance) / maxDistance * 0.2;
                         ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.moveTo(particles[i].x, particles[j].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.strokeStyle = `rgba(0, 245, 255, ${opacity})`;
                         ctx.lineWidth = 0.5;
@@ -1148,9 +1372,26 @@
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const navMenu = document.getElementById('nav-menu');
         
-        mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
         
         // Close mobile menu when clicking on a link
@@ -1158,6 +1399,7 @@
             link.addEventListener('click', () => {
                 mobileMenuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
         
@@ -1209,16 +1451,185 @@
             });
         });
         
-        // Add hover effects for service cards
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-15px) scale(1.02)';
+        // Add touch-friendly interactions for mobile
+        if ('ontouchstart' in window) {
+            // Add touch class to body for touch-specific styles
+            document.body.classList.add('touch-device');
+            
+            // Improve touch interactions for service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.01)';
+                });
+                
+                card.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
             });
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
+            // Improve button touch feedback
+            document.querySelectorAll('.btn-primary, .btn-secondary, .btn-learn-more, .quote-btn, .submit-btn').forEach(btn => {
+                btn.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                btn.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        }
+        
+        // Optimize performance on mobile
+        let ticking = false;
+        
+        function updateScrollEffects() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        });
+        
+        // Prevent iOS zoom on form inputs
+        document.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                if (window.innerWidth < 768) {
+                    // Temporarily disable viewport zoom
+                    const viewport = document.querySelector('meta[name=viewport]');
+                    const originalContent = viewport.getAttribute('content');
+                    viewport.setAttribute('content', originalContent + ', user-scalable=no');
+                    
+                    // Re-enable zoom after blur
+                    this.addEventListener('blur', function() {
+                        setTimeout(() => {
+                            viewport.setAttribute('content', originalContent);
+                        }, 300);
+                    }, { once: true });
+                }
             });
         });
     </script>
 </body>
-</html>
+</html>5rem;
+            }
+            
+            .service-icon {
+                font-size: 2.5rem;
+            }
+            
+            .service-title {
+                font-size: 1.3rem;
+            }
+            
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-detail-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-detail-card {
+                padding: 2rem;
+            }
+            
+            .service-detail-card > div:first-child {
+                font-size: 3rem;
+            }
+            
+            .contact-section {
+                padding: 3rem 0;
+            }
+            
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .form-input,
+            .form-textarea,
+            .form-select,
+            .submit-btn {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            .footer {
+                padding: 3rem 0 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-section {
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        /* Small mobile styles */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .hero {
+                padding-top: 120px;
+            }
+            
+            .hero-content {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+            
+            .hero-title {
+                font-size: clamp(1.8rem, 9vw, 2.5rem);
+                line-height: 1.1;
+            }
+            
+            .hero-subtitle {
+                font-size: clamp(0.9rem, 4vw, 1.1rem);
+                margin-bottom: 1.5rem;
+            }
+            
+            .btn-primary, 
+            .btn-secondary {
+                padding: 1rem 1.5rem;
+                font-size: 0.95rem;
+                max-width: 100%;
+            }
+            
+            .client-logo {
+                padding: 0.6rem 1rem;
+                font-size: 0.7rem;
+            }
+            
+            .service-card {
+                padding: 1.

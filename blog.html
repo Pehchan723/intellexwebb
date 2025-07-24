@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing & Web Development Blog | Intellex - Expert Insights & Tips</title>
+    <meta name="description" content="Discover expert insights on web development, digital marketing, AI chatbots, and SEO strategies. Read our comprehensive blog for business growth tips and industry trends.">
+    <meta name="keywords" content="digital marketing blog, web development tips, AI chatbots, SEO strategies, social media marketing, business growth, Pakistan digital agency">
+    <meta name="author" content="Intellex Digital Agency">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://intellex.com/blog.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Digital Marketing & Web Development Blog | Intellex">
+    <meta property="og:description" content="Expert insights on web development, digital marketing, AI chatbots, and SEO strategies for business growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://intellex.com/blog.html">
+    <meta property="og:image" content="https://intellex.com/images/blog-banner.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Digital Marketing & Web Development Blog | Intellex">
+    <meta name="twitter:description" content="Expert insights on web development, digital marketing, AI chatbots, and SEO strategies.">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Intellex Digital Marketing Blog",
+        "description": "Expert insights on web development, digital marketing, AI chatbots, and SEO strategies",
+        "url": "https://intellex.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Intellex Digital Agency",
+            "url": "https://intellex.com",
+            "logo": "https://intellex.com/logo.png"
+        }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Exo 2', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000;
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles - Same as main site */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #00f5ff;
+            background: rgba(0, 245, 255, 0.1);
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            min-width: 200px;
+            border-radius: 12px;
+            padding: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .dropdown-item:hover {
+            background: rgba(0, 245, 255, 0.1);
+            color: #00f5ff;
+        }
+        
+        .quote-btn {
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 245, 255, 0.3);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-radius: 2px;
+        }
+        
+        /* Blog Hero Section */
+        .blog-hero {
+            padding: 120px 0 80px;
+            background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, rgba(255, 0, 245, 0.1) 30%, rgba(0, 0, 0, 0.8) 70%, #000 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            z-index: 1;
+        }
+        
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .blog-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #00f5ff, #ff00f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .blog-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: #00f5ff;
+        }
+        
+        .breadcrumb-separator {
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        /* Blog Filter Section */
+        .blog-filters {
+            padding: 2rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: #00f5ff;
+            color: #00f5ff;
+            transform: translateY(-2px);
+        }
+        
+        /* Blog Grid */
+        .blog-section {
+            padding: 4rem 0;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 245, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(0,245,255,0.3)"/><circle cx="80" cy="20" r="1.5" fill="rgba(255,0,245,0.3)"/><circle cx="50" cy="80" r="1" fill="rgba(0,245,255,0.4)"/></svg>');
+            z-index: 1;
+        }
+        
+        .blog-image-icon {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .blog-content {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .blog-category {
+            background: rgba(0, 245, 255, 0.1);
+            color: #00f5ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+        }
+        
+        .blog-card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            color: #ffffff;
+        }
+        
+        .blog-card-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-card-title a:hover {
+            color: #00f5ff;
+        }
+        
+        .blog-excerpt {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .read-more-btn {
+            color: #00f5ff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            border-radius: 20px;
+            background: rgba(0, 245, 255, 0.05);
+        }
+        
+        .read-more-btn:hover {
+            background: rgba(0, 245, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        /* Featured Post */
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 245, 0.05));
+            border: 2px solid rgba(0, 245, 255, 0.2);
+        }
+        
+        .featured-post .blog-image {
+            height: 300px;
+        }
+        
+        .featured-post .blog-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-post .blog-card-title {
+            font-size: 2rem;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 3;
+        }
+        
+        /* Newsletter Section */
+        .newsletter-section {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 245, 0.05));
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .newsletter-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .newsletter-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #ffffff;
+            font-family: 'Exo 2', sans-serif;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: #00f5ff;
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .newsletter-btn {
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            color: #000;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 245, 255, 0.3);
+        }
+        
+        .newsletter-disclaimer {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        
+        .pagination-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .pagination-btn:hover, .pagination-btn.active {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: #00f5ff;
+            color: #00f5ff;
+        }
+        
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Footer - Same as main site */
+        .footer {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 245, 255, 0.05));
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #00f5ff;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-link:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: #00f5ff;
+            color: #00f5ff;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                backdrop-filter: blur(20px);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
+            .dropdown-content {
+                position: static;
+                display: block;
+                background: rgba(255, 255, 255, 0.05);
+                margin-top: 1rem;
+                border-radius: 8px;
+            }
+            
+            .blog-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-container {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Small mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .blog-card {
+                margin: 0 10px;
+            }
+            
+            .blog-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index (1).html" class="logo">INTELLEX</a>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index (1).html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">Services ▾</a>
+                        <div class="dropdown-content">
+                            <a href="services.html#web-dev" class="dropdown-item">Web Development</a>
+                            <a href="services.html#digital-marketing" class="dropdown-item">Digital Marketing</a>
+                            <a href="services.html#ai-chatbots" class="dropdown-item">AI Chatbots</a>
+                            <a href="services.html#seo" class="dropdown-item">SEO Services</a>
+                            <a href="services.html#social-media" class="dropdown-item">Social Media</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="quote-btn">Get Quote</a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <div class="breadcrumb">
+                    
+                    <span class="breadcrumb-separator"></span>
+                    <span></span>
+                </div>
+                <h1 class="blog-title">Digital Insights & Expert Tips</h1>
+                <p class="blog-subtitle">Stay ahead with the latest trends in web development, digital marketing strategies, AI innovations, and business growth tactics from industry experts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
+                <button class="filter-btn" data-filter="ai-chatbots">AI & Chatbots</button>
+                <button class="filter-btn" data-filter="seo">SEO Tips</button>
+                <button class="filter-btn" data-filter="business-growth">Business Growth</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid" id="blog-grid">
+                
+                <!-- Featured Post -->
+                <article class="blog-card featured-post" data-category="digital-marketing">
+                    <div class="featured-badge">Featured</div>
+                    <div class="blog-image">
+                        <div class="blog-image-icon">🚀</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Digital Marketing</span>
+                            <span>•</span>
+                            <span>December 15, 2024</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h2 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('digital-marketing-trends-2025')">Digital Marketing Trends That Will Dominate 2025: AI-Powered Strategies for Pakistani Businesses</a>
+                        </h2>
+                        <p class="blog-excerpt">
+                            Discover the game-changing digital marketing trends reshaping the landscape in 2025. From AI-powered personalization to voice search optimization, learn how Pakistani businesses can leverage these trends to achieve unprecedented growth and stay ahead of the competition.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('digital-marketing-trends-2025')">
+                            Read Full Article →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-category="web-development">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">💻</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Web Development</span>
+                            <span>•</span>
+                            <span>December 12, 2024</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('responsive-web-design-2025')">Responsive Web Design in 2025: Mobile-First Strategies for Pakistani Market</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            With mobile internet usage dominating Pakistan, learn essential responsive design techniques that ensure your website performs flawlessly across all devices and drives higher conversion rates.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('responsive-web-design-2025')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-category="ai-chatbots">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">🤖</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">AI & Chatbots</span>
+                            <span>•</span>
+                            <span>December 10, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('ai-chatbots-customer-service')">How AI Chatbots Are Revolutionizing Customer Service for Small Businesses</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Explore how intelligent chatbots can transform your customer support, reduce response times by 90%, and increase customer satisfaction while cutting operational costs.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('ai-chatbots-customer-service')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-category="seo">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">📈</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">SEO Tips</span>
+                            <span>•</span>
+                            <span>December 8, 2024</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('local-seo-pakistan-2025')">Local SEO Mastery: Ranking Higher in Pakistani Search Results</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Master local SEO strategies specifically tailored for Pakistani businesses. Learn how to dominate local search results and attract more customers in your city.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('local-seo-pakistan-2025')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-category="business-growth">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">📊</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Business Growth</span>
+                            <span>•</span>
+                            <span>December 5, 2024</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('digital-transformation-small-business')">Digital Transformation Guide for Small Businesses in Pakistan</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            A comprehensive roadmap for Pakistani small businesses to embrace digital transformation, streamline operations, and compete with larger enterprises effectively.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('digital-transformation-small-business')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-category="web-development">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">⚡</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Web Development</span>
+                            <span>•</span>
+                            <span>December 3, 2024</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('website-speed-optimization')">Website Speed Optimization: Boost Your Site Performance by 300%</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Discover proven techniques to dramatically improve your website's loading speed, enhance user experience, and boost your Google search rankings.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('website-speed-optimization')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-category="digital-marketing">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">📱</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Digital Marketing</span>
+                            <span>•</span>
+                            <span>December 1, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('social-media-marketing-pakistan')">Social Media Marketing Strategies That Work in Pakistan's Digital Landscape</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Unlock the secrets of successful social media marketing in Pakistan. Learn platform-specific strategies for Facebook, Instagram, and LinkedIn that drive real business results.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('social-media-marketing-pakistan')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7 -->
+                <article class="blog-card" data-category="ai-chatbots">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">🧠</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">AI & Chatbots</span>
+                            <span>•</span>
+                            <span>November 28, 2024</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('ai-automation-business-processes')">AI Automation: Streamlining Business Processes for Maximum Efficiency</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Learn how AI automation can eliminate repetitive tasks, reduce human error, and free up your team to focus on strategic growth initiatives.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('ai-automation-business-processes')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 8 -->
+                <article class="blog-card" data-category="seo">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">🔍</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">SEO Tips</span>
+                            <span>•</span>
+                            <span>November 25, 2024</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('content-marketing-seo-strategy')">Content Marketing & SEO: Creating Content That Ranks and Converts</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Master the art of creating SEO-optimized content that not only ranks on Google but also converts visitors into paying customers.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('content-marketing-seo-strategy')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 9 -->
+                <article class="blog-card" data-category="business-growth">
+                    <div class="blog-image">
+                        <div class="blog-image-icon">💼</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Business Growth</span>
+                            <span>•</span>
+                            <span>November 22, 2024</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            <a href="#" onclick="openBlogPost('ecommerce-growth-strategies')">E-commerce Growth Strategies: From Startup to Market Leader</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Discover proven e-commerce growth strategies used by successful Pakistani online businesses to scale from startup to market leadership.
+                        </p>
+                        <a href="#" class="read-more-btn" onclick="openBlogPost('ecommerce-growth-strategies')">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination-btn disabled">← Previous</a>
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn">Next →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <h2 class="newsletter-title">Stay Updated with Digital Insights</h2>
+                <p class="newsletter-subtitle">
+                    Get the latest digital marketing trends, web development tips, and business growth strategies delivered to your inbox weekly.
+                </p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe Now</button>
+                </form>
+                <p class="newsletter-disclaimer">
+                    Join 5,000+ business owners who trust our insights. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>INTELLEX</h3>
+                    <p>Your trusted partner for cutting-edge digital solutions. We transform businesses through innovative web development, strategic digital marketing, and intelligent AI automation.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html#web-dev">Web Development</a>
+                    <a href="services.html#digital-marketing">Digital Marketing</a>
+                    <a href="services.html#ai-chatbots">AI Chatbots</a>
+                    <a href="services.html#seo">SEO Services</a>
+                    <a href="services.html#social-media">Social Media Management</a>
+                    <a href="services.html#brand-strategy">Brand Strategy</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📧 intellex6@gmail.com</p>
+                    <p>📞 +92 319 9308723</p>
+                    <p>📍 Office# 21 Jinnah Plaza GujarKhan <br>Rawalpindi, Pakistan</p>
+                    <p>⏰ Mon-Sat: 9AM-6PM PST</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intellex Digital Agency. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Blog Post Modal -->
+    <div id="blog-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; overflow-y: auto;">
+        <div style="max-width: 800px; margin: 2rem auto; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px);">
+            <div style="padding: 2rem; position: relative;">
+                <button onclick="closeBlogPost()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer;">×</button>
+                <div id="blog-modal-content">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Blog post content database
+        const blogPosts = {
+            'digital-marketing-trends-2025': {
+                title: 'Digital Marketing Trends That Will Dominate 2025: AI-Powered Strategies for Pakistani Businesses',
+                category: 'Digital Marketing',
+                date: 'December 15, 2024',
+                readTime: '8 min read',
+                author: 'Intellex Team',
+                content: `
+                    <h2>The Digital Revolution is Here</h2>
+                    <p>As we step into 2025, the digital marketing landscape in Pakistan is experiencing unprecedented transformation. With over 118 million internet users and rapidly growing e-commerce adoption, Pakistani businesses have a golden opportunity to leverage cutting-edge digital marketing strategies.</p>
+                    
+                    <h3>1. AI-Powered Personalization</h3>
+                    <p>Artificial Intelligence is no longer a luxury—it's a necessity. Pakistani businesses are increasingly using AI to:</p>
+                    <ul>
+                        <li>Personalize customer experiences across all touchpoints</li>
+                        <li>Predict customer behavior and preferences</li>
+                        <li>Automate content creation and social media posting</li>
+                        <li>Optimize ad spending through intelligent bidding</li>
+                    </ul>
+                    
+                    <h3>2. Voice Search Optimization</h3>
+                    <p>With the growing popularity of voice assistants and voice search in Urdu and English, businesses must optimize for conversational queries. This includes:</p>
+                    <ul>
+                        <li>Optimizing for local voice searches in Pakistani cities</li>
+                        <li>Creating FAQ-style content that answers specific questions</li>
+                        <li>Focusing on long-tail keywords in both English and Urdu</li>
+                    </ul>
+                    
+                    <h3>3. Social Commerce Integration</h3>
+                    <p>Pakistan's social media usage is among the highest globally. Social commerce is becoming the primary sales channel:</p>
+                    <ul>
+                        <li>Instagram and Facebook shopping features</li>
+                        <li>WhatsApp Business for direct customer communication</li>
+                        <li>TikTok shopping for younger demographics</li>
+                    </ul>
+                    
+                    <h3>4. Video-First Content Strategy</h3>
+                    <p>Video content consumption in Pakistan has increased by 400% in the last two years. Successful businesses are investing in:</p>
+                    <ul>
+                        <li>Short-form video content for TikTok and Instagram Reels</li>
+                        <li>Live streaming for product launches and Q&A sessions</li>
+                        <li>Educational content that builds trust and authority</li>
+                    </ul>
+                    
+                    <h3>Key Takeaways for Pakistani Businesses</h3>
+                    <p>To stay competitive in 2025, Pakistani businesses must embrace these digital marketing trends while maintaining authenticity and cultural relevance. The key is to start small, test continuously, and scale what works for your specific audience.</p>
+                    
+                    <p>Ready to implement these strategies? <a href="contact.html" style="color: #00f5ff;">Contact Intellex</a> for a personalized digital marketing consultation.</p>
+                `
+            },
+            'responsive-web-design-2025': {
+                title: 'Responsive Web Design in 2025: Mobile-First Strategies for Pakistani Market',
+                category: 'Web Development',
+                date: 'December 12, 2024',
+                readTime: '6 min read',
+                author: 'Development Team',
+                content: `
+                    <h2>Mobile Internet Revolution in Pakistan</h2>
+                    <p>Pakistan has over 95 million mobile internet users, making mobile-first design not just recommended—it's essential. Here's how to create websites that perform exceptionally on mobile devices.</p>
+                    
+                    <h3>Essential Mobile-First Design Principles</h3>
+                    <ul>
+                        <li>Touch-friendly navigation with larger buttons</li>
+                        <li>Fast loading times (under 3 seconds)</li>
+                        <li>Readable text without zooming</li>
+                        <li>Optimized images for different screen sizes</li>
+                    </ul>
+                    
+                    <h3>Performance Optimization Techniques</h3>
+                    <p>Pakistani users often face slower internet speeds, making performance crucial:</p>
+                    <ul>
+                        <li>Image compression and lazy loading</li>
+                        <li>Minimized CSS and JavaScript</li>
+                        <li>CDN implementation for faster content delivery</li>
+                        <li>Progressive Web App (PWA) features for offline functionality</li>
+                    </ul>
+                    
+                    <h3>Testing and Optimization Tools</h3>
+                    <p>Use these tools to ensure your website performs well across all devices:</p>
+                    <ul>
+                        <li>Google PageSpeed Insights</li>
+                        <li>Mobile-Friendly Test</li>
+                        <li>Cross-browser testing tools</li>
+                        <li>Real device testing with different network speeds</li>
+                    </ul>
+                    
+                    <p>Need help creating a mobile-optimized website? <a href="contact.html" style="color: #00f5ff;">Get a free consultation</a> from our web development experts.</p>
+                `
+            },
+            'ai-chatbots-customer-service': {
+                title: 'How AI Chatbots Are Revolutionizing Customer Service for Small Businesses',
+                category: 'AI & Chatbots',
+                date: 'December 10, 2024',
+                readTime: '7 min read',
+                author: 'AI Solutions Team',
+                content: `
+                    <h2>The Customer Service Revolution</h2>
+                    <p>AI chatbots are transforming how small businesses handle customer service. With 24/7 availability and instant responses, they're becoming indispensable tools for business growth.</p>
+                    
+                    <h3>Key Benefits of AI Chatbots</h3>
+                    <ul>
+                        <li>90% reduction in response time</li>
+                        <li>60% decrease in customer service costs</li>
+                        <li>24/7 availability for global customers</li>
+                        <li>Consistent service quality</li>
+                        <li>Multilingual support (English, Urdu, Punjabi)</li>
+                    </ul>
+                    
+                    <h3>Implementation Strategies</h3>
+                    <p>Successfully implementing chatbots requires careful planning:</p>
+                    <ul>
+                        <li>Identify common customer queries and pain points</li>
+                        <li>Design conversation flows that feel natural</li>
+                        <li>Integrate with existing CRM systems</li>
+                        <li>Train the AI with your business-specific data</li>
+                        <li>Provide seamless handoff to human agents when needed</li>
+                    </ul>
+                    
+                    <h3>Real-World Success Stories</h3>
+                    <p>Pakistani businesses using AI chatbots have seen remarkable results:</p>
+                    <ul>
+                        <li>E-commerce stores: 40% increase in conversion rates</li>
+                        <li>Service businesses: 70% reduction in phone calls</li>
+                        <li>Educational institutions: 80% faster query resolution</li>
+                    </ul>
+                    
+                    <p>Ready to implement AI chatbots for your business? <a href="contact.html" style="color: #00f5ff;">Contact our AI specialists</a> for a custom solution.</p>
+                `
+            }
+        };
+
+        // Blog filtering functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Filter blog cards
+                blogCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Blog post modal functionality
+        function openBlogPost(postId) {
+            const post = blogPosts[postId];
+            if (!post) return;
+
+            const modal = document.getElementById('blog-modal');
+            const content = document.getElementById('blog-modal-content');
+
+            content.innerHTML = `
+                <div style="margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                        <span style="background: rgba(0,245,255,0.1); color: #00f5ff; padding: 0.3rem 0.8rem; border-radius: 15px; border: 1px solid rgba(0,245,255,0.2);">${post.category}</span>
+                        <span>•</span>
+                        <span>${post.date}</span>
+                        <span>•</span>
+                        <span>${post.readTime}</span>
+                        <span>•</span>
+                        <span>By ${post.author}</span>
+                    </div>
+                    <h1 style="font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: #fff; line-height: 1.3;">${post.title}</h1>
+                </div>
+                <div style="color: rgba(255,255,255,0.9); line-height: 1.8; font-size: 1.1rem;">
+                    ${post.content}
+                </div>
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Found this article helpful? Share it with your network:</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on LinkedIn</a>
+                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on Facebook</a>
+                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on Twitter</a>
+                    </div>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogPost() {
+            const modal = document.getElementById('blog-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('blog-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'blog-modal') {
+                closeBlogPost();
+            }
+        });
+
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.newsletter-btn');
+            const input = e.target.querySelector('.newsletter-input');
+            
+            btn.textContent = 'Subscribing...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.textContent = '✅ Subscribed!';
+                btn.style.background = 'linear-gradient(135deg, #00ff88, #00cc66)';
+                input.value = '';
+                
+                setTimeout(() => {
+                    btn.textContent = 'Subscribe Now';
+                    btn.disabled = false;
+                    btn.style.background = 'linear-gradient(135deg, #00f5ff, #ff00f5)';
+                }, 3000);
+            }, 1500);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for blog cards animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const blogCardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all blog cards for animation
+        blogCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            blogCardObserver.observe(card);
+        });
+
+        // Search functionality (if search input is added later)
+        function searchBlogPosts(query) {
+            const searchTerm = query.toLowerCase();
+            blogCards.forEach(card => {
+                const title = card.querySelector('.blog-card-title').textContent.toLowerCase();
+                const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                const category = card.querySelector('.blog-category').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('blog-modal');
+                if (modal.style.display === 'block') {
+                    closeBlogPost();
+                }
+            }
+        });
+
+        // Reading progress indicator (can be added to individual blog posts)
+        function updateReadingProgress() {
+            const article = document.querySelector('#blog-modal-content');
+            if (!article) return;
+            
+            const articleHeight = article.scrollHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            const progress = (scrollTop / (articleHeight - windowHeight)) * 100;
+            
+            // Update progress bar if it exists
+            const progressBar = document.getElementById('reading-progress');
+            if (progressBar) {
+                progressBar.style.width = Math.min(progress, 100) + '%';
+            }
+        }
+
+        // Add scroll event listener for reading progress
+        window.addEventListener('scroll', updateReadingProgress);
+
+        // Social media sharing functionality
+        function shareOnSocial(platform, url, title) {
+            const encodedUrl = encodeURIComponent(url || window.location.href);
+            const encodedTitle = encodeURIComponent(title || document.title);
+            
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+                    break;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add loading state to blog cards
+            blogCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('loaded');
+                }, index * 100);
+            });
+
+            // Add hover effects to filter buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    if (!btn.classList.contains('active')) {
+                        btn.style.transform = 'translateY(-2px)';
+                    }
+                });
+                
+                btn.addEventListener('mouseleave', () => {
+                    if (!btn.classList.contains('active')) {
+                        btn.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            // Add click tracking for analytics (placeholder)
+            blogCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.querySelector('.blog-card-title').textContent;
+                    const category = card.querySelector('.blog-category').textContent;
+                    
+                    // Analytics tracking would go here
+                    console.log(`Blog post clicked: ${title} (${category})`);
+                });
+            });
+
+            // Initialize tooltips for any elements with data-tooltip attribute
+            const tooltipElements = document.querySelectorAll('[data-tooltip]');
+            tooltipElements.forEach(element => {
+                element.addEventListener('mouseenter', showTooltip);
+                element.addEventListener('mouseleave', hideTooltip);
+            });
+        });
+
+        // Tooltip functions
+        function showTooltip(e) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = e.target.getAttribute('data-tooltip');
+            tooltip.style.cssText = `
+                position: absolute;
+                background: rgba(0, 0, 0, 0.9);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                font-size: 0.875rem;
+                z-index: 1000;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            
+            document.body.appendChild(tooltip);
+            
+            const rect = e.target.getBoundingClientRect();
+            tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+            
+            setTimeout(() => tooltip.style.opacity = '1', 100);
+            
+            e.target.tooltipElement = tooltip;
+        }
+
+        function hideTooltip(e) {
+            if (e.target.tooltipElement) {
+                e.target.tooltipElement.remove();
+                e.target.tooltipElement = null;
+            }
+        }
+
+        // Performance optimization: Lazy load blog post content
+        const lazyLoadBlogContent = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const card = entry.target;
+                        // Load additional content or images if needed
+                        observer.unobserve(card);
+                    }
+                });
+            });
+
+            blogCards.forEach(card => observer.observe(card));
+        };
+
+        // Initialize lazy loading
+        lazyLoadBlogContent();
+
+        // Add copy to clipboard functionality for code blocks (if any)
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show success message
+                const message = document.createElement('div');
+                message.textContent = 'Copied to clipboard!';
+                message.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, #00f5ff, #ff00f5);
+                    color: black;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    z-index: 10001;
+                    animation: slideIn 0.3s ease;
+                `;
+                
+                document.body.appendChild(message);
+                setTimeout(() => {
+                    message.remove();
+                }, 3000);
+            });
+        }
+
+        // Service Worker registration for offline functionality (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+    </script>
+
+    <!-- Add CSS for additional animations -->
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .blog-card.loaded {
+            animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tooltip {
+            font-family: 'Exo 2', sans-serif;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Reading progress bar styles */
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #00f5ff, #ff00f5);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+
+        /* Enhanced mobile responsiveness */
+        @media (max-width: 320px) {
+            .blog-card {
+                margin: 0 5px;
+            }
+            
+            .blog-content {
+                padding: 1rem;
+            }
+            
+            .newsletter-container {
+                padding: 1.5rem;
+                margin: 0 10px;
+            }
+            
+            .filter-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+
+</body>
+</html>

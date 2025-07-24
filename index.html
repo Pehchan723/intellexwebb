@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -243,7 +243,7 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #ffffff, #ffffff);
+            background: linear-gradient(135deg, #ffffff, #ff00f5);
             color: #000;
             padding: 1rem 2rem;
             border: none;
@@ -320,7 +320,6 @@
             display: flex;
             align-items: center;
             mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
         }
         
         .client-logos {
@@ -328,28 +327,13 @@
             gap: 4rem;
             animation: moveLeftContinuous 30s linear infinite;
             white-space: nowrap;
-            will-change: transform;
-            -webkit-animation: moveLeftContinuous 30s linear infinite;
         }
         
         @keyframes moveLeftContinuous {
             0% {
                 transform: translateX(0);
-                -webkit-transform: translateX(0);
             }
             100% {
-                transform: translateX(-50%);
-                -webkit-transform: translateX(-50%);
-            }
-        }
-        
-        @-webkit-keyframes moveLeftContinuous {
-            0% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-            100% {
-                -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
             }
         }
@@ -386,8 +370,6 @@
     height: 80px !important;
     display: flex !important;
     align-items: center !important;
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent) !important;
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent) !important;
 }
 
 .client-logos {
@@ -395,12 +377,10 @@
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 4rem !important;
-    animation: moveLeftContinuous 30s linear infinite !important;
-    -webkit-animation: moveLeftContinuous 30s linear infinite !important;
     white-space: nowrap !important;
-    will-change: transform !important;
-    min-width: max-content !important;
-    transform: translateZ(0) !important; /* Force hardware acceleration */
+    width: calc(200% + 8rem) !important;
+    animation: scrollLeft 20s linear infinite !important;
+    -webkit-animation: scrollLeft 20s linear infinite !important;
 }
 
 .client-logo {
@@ -429,25 +409,21 @@
     transform: translateY(-2px) !important;
 }
 
-@keyframes moveLeftContinuous {
+@keyframes scrollLeft {
     0% {
-        transform: translateX(0) translateZ(0);
-        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%) translateZ(0);
-        -webkit-transform: translateX(-50%) translateZ(0);
+        transform: translateX(-50%);
     }
 }
 
-@-webkit-keyframes moveLeftContinuous {
+@-webkit-keyframes scrollLeft {
     0% {
-        -webkit-transform: translateX(0) translateZ(0);
-        transform: translateX(0) translateZ(0);
+        -webkit-transform: translateX(0);
     }
     100% {
-        -webkit-transform: translateX(-50%) translateZ(0);
-        transform: translateX(-50%) translateZ(0);
+        -webkit-transform: translateX(-50%);
     }
 }
 

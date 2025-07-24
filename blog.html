@@ -66,7 +66,7 @@
             padding: 0 20px;
         }
         
-        /* Header Styles - Same as main site */
+        /* Header Styles - Enhanced for mobile */
         .header {
             position: fixed;
             top: 0;
@@ -87,11 +87,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
+            min-height: 70px;
         }
         
         .logo {
             font-family: 'Orbitron', monospace;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             background: linear-gradient(135deg, #00f5ff, #ff00f5);
             -webkit-background-clip: text;
@@ -183,6 +184,7 @@
             flex-direction: column;
             cursor: pointer;
             gap: 4px;
+            padding: 5px;
         }
         
         .hamburger-line {
@@ -193,9 +195,9 @@
             border-radius: 2px;
         }
         
-        /* Blog Hero Section */
+        /* Blog Hero Section - Mobile optimized */
         .blog-hero {
-            padding: 120px 0 80px;
+            padding: 140px 0 60px;
             background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, rgba(255, 0, 245, 0.1) 30%, rgba(0, 0, 0, 0.8) 70%, #000 100%);
             text-align: center;
             position: relative;
@@ -220,22 +222,24 @@
         
         .blog-title {
             font-family: 'Orbitron', monospace;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #ffffff, #00f5ff, #ff00f5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2;
         }
         
         .blog-subtitle {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 20px;
         }
         
         .breadcrumb {
@@ -261,7 +265,7 @@
             color: rgba(255, 255, 255, 0.4);
         }
         
-        /* Blog Filter Section */
+        /* Blog Filter Section - Mobile optimized */
         .blog-filters {
             padding: 2rem 0;
             text-align: center;
@@ -272,20 +276,22 @@
         .filter-buttons {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.8rem;
             flex-wrap: wrap;
+            padding: 0 10px;
         }
         
         .filter-btn {
-            padding: 0.75rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
             color: rgba(255, 255, 255, 0.8);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
+            white-space: nowrap;
         }
         
         .filter-btn:hover, .filter-btn.active {
@@ -295,15 +301,15 @@
             transform: translateY(-2px);
         }
         
-        /* Blog Grid */
+        /* Blog Grid - Enhanced mobile responsive */
         .blog-section {
             padding: 4rem 0;
         }
         
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-bottom: 4rem;
         }
         
@@ -325,12 +331,12 @@
         
         .blog-image {
             width: 100%;
-            height: 250px;
+            height: 200px;
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(255, 0, 245, 0.1));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 3rem;
             position: relative;
             overflow: hidden;
         }
@@ -356,16 +362,17 @@
         }
         
         .blog-content {
-            padding: 2rem;
+            padding: 1.5rem;
         }
         
         .blog-meta {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
             margin-bottom: 1rem;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: rgba(255, 255, 255, 0.6);
+            flex-wrap: wrap;
         }
         
         .blog-category {
@@ -373,14 +380,14 @@
             color: #00f5ff;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
             border: 1px solid rgba(0, 245, 255, 0.2);
         }
         
         .blog-card-title {
             font-family: 'Orbitron', monospace;
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             font-weight: 600;
             margin-bottom: 1rem;
             line-height: 1.3;
@@ -401,6 +408,7 @@
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
             line-height: 1.6;
+            font-size: 0.95rem;
         }
         
         .read-more-btn {
@@ -415,6 +423,7 @@
             border: 1px solid rgba(0, 245, 255, 0.2);
             border-radius: 20px;
             background: rgba(0, 245, 255, 0.05);
+            font-size: 0.9rem;
         }
         
         .read-more-btn:hover {
@@ -422,28 +431,26 @@
             transform: translateX(5px);
         }
         
-        /* Featured Post */
+        /* Featured Post - Mobile optimized */
         .featured-post {
             grid-column: 1 / -1;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0;
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 245, 0.05));
             border: 2px solid rgba(0, 245, 255, 0.2);
         }
         
         .featured-post .blog-image {
-            height: 300px;
+            height: 250px;
         }
         
         .featured-post .blog-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 2rem;
         }
         
         .featured-post .blog-card-title {
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 4vw, 2rem);
         }
         
         .featured-badge {
@@ -459,7 +466,7 @@
             z-index: 3;
         }
         
-        /* Newsletter Section */
+        /* Newsletter Section - Mobile optimized */
         .newsletter-section {
             background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 245, 0.05));
             padding: 4rem 0;
@@ -471,7 +478,7 @@
             max-width: 600px;
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.05);
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -479,7 +486,7 @@
         
         .newsletter-title {
             font-family: 'Orbitron', monospace;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             font-weight: 700;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #ffffff, #00f5ff);
@@ -491,12 +498,14 @@
         .newsletter-subtitle {
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
+            font-size: 0.95rem;
         }
         
         .newsletter-form {
             display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
+            flex-direction: column;
         }
         
         .newsletter-input {
@@ -507,6 +516,7 @@
             border-radius: 10px;
             color: #ffffff;
             font-family: 'Exo 2', sans-serif;
+            font-size: 1rem;
         }
         
         .newsletter-input:focus {
@@ -525,6 +535,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             white-space: nowrap;
+            font-size: 1rem;
         }
         
         .newsletter-btn:hover {
@@ -537,17 +548,18 @@
             color: rgba(255, 255, 255, 0.6);
         }
         
-        /* Pagination */
+        /* Pagination - Mobile optimized */
         .pagination {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
             margin-top: 3rem;
+            flex-wrap: wrap;
         }
         
         .pagination-btn {
-            padding: 0.75rem 1.5rem;
+            padding: 0.6rem 1rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -555,6 +567,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.9rem;
         }
         
         .pagination-btn:hover, .pagination-btn.active {
@@ -568,7 +581,7 @@
             cursor: not-allowed;
         }
         
-        /* Footer - Same as main site */
+        /* Footer - Mobile optimized */
         .footer {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 245, 255, 0.05));
             padding: 4rem 0 2rem;
@@ -578,7 +591,7 @@
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
             margin-bottom: 3rem;
         }
         
@@ -639,8 +652,23 @@
             color: rgba(255, 255, 255, 0.6);
         }
         
-        /* Mobile Responsive */
+        /* Blog Modal - Mobile optimized */
+        #blog-modal {
+            padding: 10px;
+        }
+        
+        #blog-modal > div {
+            margin: 1rem auto;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Mobile Responsive - Enhanced */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
             .nav-menu {
                 position: fixed;
                 top: 80px;
@@ -654,6 +682,7 @@
                 padding-top: 2rem;
                 transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 backdrop-filter: blur(20px);
+                gap: 1rem;
             }
             
             .nav-menu.active {
@@ -684,21 +713,30 @@
                 border-radius: 8px;
             }
             
+            .nav-item .quote-btn {
+                margin-top: 1rem;
+            }
+            
             .blog-hero {
-                padding: 100px 0 60px;
+                padding: 120px 0 50px;
             }
             
             .blog-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             
             .featured-post {
                 grid-template-columns: 1fr;
             }
             
+            .featured-post .blog-content {
+                padding: 1.5rem;
+            }
+            
             .filter-buttons {
                 gap: 0.5rem;
+                padding: 0 5px;
             }
             
             .filter-btn {
@@ -708,34 +746,203 @@
             
             .newsletter-form {
                 flex-direction: column;
+                gap: 1rem;
             }
             
             .newsletter-container {
-                padding: 2rem;
-                margin: 0 1rem;
+                margin: 0 10px;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .pagination {
+                gap: 0.3rem;
+            }
+            
+            .pagination-btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+            
+            .blog-content {
+                padding: 1.2rem;
+            }
+            
+            .blog-meta {
+                gap: 0.5rem;
+                font-size: 0.75rem;
             }
         }
         
-        /* Small mobile */
+        /* Small mobile - Enhanced */
         @media (max-width: 480px) {
             .container {
-                padding: 0 15px;
+                padding: 0 10px;
             }
             
             .logo {
                 font-size: 1.5rem;
             }
             
+            .nav {
+                padding: 0.8rem 0;
+            }
+            
+            .blog-hero {
+                padding: 110px 0 40px;
+            }
+            
+            .blog-title {
+                font-size: clamp(1.8rem, 8vw, 3rem);
+            }
+            
+            .blog-subtitle {
+                font-size: clamp(0.9rem, 4vw, 1.1rem);
+                padding: 0 10px;
+            }
+            
+            .blog-grid {
+                gap: 1rem;
+            }
+            
             .blog-card {
-                margin: 0 10px;
+                margin: 0 5px;
             }
             
             .blog-content {
+                padding: 1rem;
+            }
+            
+            .blog-image {
+                height: 180px;
+                font-size: 2.5rem;
+            }
+            
+            .filter-buttons {
+                gap: 0.3rem;
+                padding: 0;
+            }
+            
+            .filter-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.75rem;
+            }
+            
+            .newsletter-container {
                 padding: 1.5rem;
+                margin: 0 5px;
+            }
+            
+            .newsletter-title {
+                font-size: clamp(1.3rem, 6vw, 1.8rem);
+            }
+            
+            .newsletter-form {
+                gap: 0.8rem;
+            }
+            
+            .newsletter-input, .newsletter-btn {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .footer-content {
+                gap: 1.5rem;
+            }
+            
+            .social-links {
+                justify-content: flex-start;
+                gap: 0.8rem;
+            }
+            
+            .social-link {
+                padding: 0.6rem;
+                font-size: 1rem;
+            }
+            
+            #blog-modal {
+                padding: 5px;
+            }
+            
+            #blog-modal > div {
+                margin: 0.5rem auto;
+                padding: 1rem;
+            }
+            
+            .pagination {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .pagination-btn {
+                padding: 0.4rem 0.6rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 320px) {
+            .container {
+                padding: 0 8px;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .nav {
+                padding: 0.6rem 0;
+            }
+            
+            .blog-hero {
+                padding: 100px 0 30px;
+            }
+            
+            .blog-section {
+                padding: 2rem 0;
+            }
+            
+            .blog-content {
+                padding: 0.8rem;
+            }
+            
+            .newsletter-container {
+                padding: 1rem;
+                margin: 0 3px;
+            }
+            
+            .footer {
+                padding: 2rem 0 1rem;
+            }
+        }
+        
+        /* Tablet landscape */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .featured-post {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+        
+        /* Large desktop */
+        @media (min-width: 1025px) {
+            .featured-post {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: row;
             }
         }
     </style>
@@ -789,7 +996,6 @@
         <div class="container">
             <div class="blog-hero-content">
                 <div class="breadcrumb">
-                    
                     <span class="breadcrumb-separator"></span>
                     <span></span>
                 </div>
@@ -905,7 +1111,7 @@
                             <span>•</span>
                             <span>December 8, 2024</span>
                             <span>•</span>
-                            <span>5 min read</span>
+                            <span>6 min read</span>
                         </div>
                         <h3 class="blog-card-title">
                             <a href="#" onclick="openBlogPost('local-seo-pakistan-2025')">Local SEO Mastery: Ranking Higher in Pakistani Search Results</a>
@@ -1153,7 +1359,7 @@
     <div id="blog-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; overflow-y: auto;">
         <div style="max-width: 800px; margin: 2rem auto; background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px);">
             <div style="padding: 2rem; position: relative;">
-                <button onclick="closeBlogPost()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer;">×</button>
+                <button onclick="closeBlogPost()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; z-index: 10001;">×</button>
                 <div id="blog-modal-content">
                     <!-- Dynamic content will be loaded here -->
                 </div>
@@ -1162,7 +1368,7 @@
     </div>
 
     <script>
-        // Blog post content database
+        // Complete blog post content database with all posts
         const blogPosts = {
             'digital-marketing-trends-2025': {
                 title: 'Digital Marketing Trends That Will Dominate 2025: AI-Powered Strategies for Pakistani Businesses',
@@ -1207,6 +1413,22 @@
                         <li>Educational content that builds trust and authority</li>
                     </ul>
                     
+                    <h3>5. Influencer Marketing Evolution</h3>
+                    <p>The influencer marketing landscape is maturing with micro and nano-influencers delivering better ROI:</p>
+                    <ul>
+                        <li>Authentic partnerships with local influencers</li>
+                        <li>Employee advocacy programs</li>
+                        <li>User-generated content campaigns</li>
+                    </ul>
+                    
+                    <h3>6. Privacy-First Marketing</h3>
+                    <p>With increasing privacy concerns, businesses must adapt to cookieless marketing:</p>
+                    <ul>
+                        <li>First-party data collection strategies</li>
+                        <li>Consent-based marketing approaches</li>
+                        <li>Contextual advertising methods</li>
+                    </ul>
+                    
                     <h3>Key Takeaways for Pakistani Businesses</h3>
                     <p>To stay competitive in 2025, Pakistani businesses must embrace these digital marketing trends while maintaining authenticity and cultural relevance. The key is to start small, test continuously, and scale what works for your specific audience.</p>
                     
@@ -1223,30 +1445,60 @@
                     <h2>Mobile Internet Revolution in Pakistan</h2>
                     <p>Pakistan has over 95 million mobile internet users, making mobile-first design not just recommended—it's essential. Here's how to create websites that perform exceptionally on mobile devices.</p>
                     
+                    <h3>The Pakistani Mobile Landscape</h3>
+                    <p>Understanding the local context is crucial for effective mobile design:</p>
+                    <ul>
+                        <li>85% of internet users access websites primarily through mobile devices</li>
+                        <li>Average internet speed varies significantly across regions</li>
+                        <li>Data costs influence user behavior and expectations</li>
+                        <li>Local preferences for specific design patterns and user flows</li>
+                    </ul>
+                    
                     <h3>Essential Mobile-First Design Principles</h3>
                     <ul>
-                        <li>Touch-friendly navigation with larger buttons</li>
-                        <li>Fast loading times (under 3 seconds)</li>
-                        <li>Readable text without zooming</li>
-                        <li>Optimized images for different screen sizes</li>
+                        <li>Touch-friendly navigation with larger buttons (44px minimum)</li>
+                        <li>Fast loading times (under 3 seconds for first contentful paint)</li>
+                        <li>Readable text without zooming (16px minimum font size)</li>
+                        <li>Optimized images for different screen densities</li>
+                        <li>Thumb-friendly interface design</li>
                     </ul>
                     
                     <h3>Performance Optimization Techniques</h3>
                     <p>Pakistani users often face slower internet speeds, making performance crucial:</p>
                     <ul>
-                        <li>Image compression and lazy loading</li>
-                        <li>Minimized CSS and JavaScript</li>
+                        <li>Image compression and lazy loading implementation</li>
+                        <li>Minimized CSS and JavaScript bundles</li>
                         <li>CDN implementation for faster content delivery</li>
                         <li>Progressive Web App (PWA) features for offline functionality</li>
+                        <li>Critical CSS inlining for faster initial rendering</li>
+                    </ul>
+                    
+                    <h3>Design Patterns That Work in Pakistan</h3>
+                    <ul>
+                        <li>Bottom navigation for easy thumb access</li>
+                        <li>Card-based layouts for better content organization</li>
+                        <li>Local language support and RTL text direction</li>
+                        <li>Culturally appropriate color schemes and imagery</li>
                     </ul>
                     
                     <h3>Testing and Optimization Tools</h3>
                     <p>Use these tools to ensure your website performs well across all devices:</p>
                     <ul>
-                        <li>Google PageSpeed Insights</li>
-                        <li>Mobile-Friendly Test</li>
-                        <li>Cross-browser testing tools</li>
+                        <li>Google PageSpeed Insights for performance analysis</li>
+                        <li>Mobile-Friendly Test for mobile optimization</li>
+                        <li>Cross-browser testing tools for compatibility</li>
                         <li>Real device testing with different network speeds</li>
+                        <li>Local user testing with target audience</li>
+                    </ul>
+                    
+                    <h3>Implementation Checklist</h3>
+                    <p>Follow this checklist to ensure your mobile-first design is effective:</p>
+                    <ul>
+                        <li>Responsive breakpoints at 320px, 768px, 1024px, and 1200px</li>
+                        <li>Flexible grid systems using CSS Grid or Flexbox</li>
+                        <li>Scalable vector graphics (SVG) for crisp icons</li>
+                        <li>Accessible color contrast ratios (4.5:1 minimum)</li>
+                        <li>Optimized forms with proper input types and validation</li>
                     </ul>
                     
                     <p>Need help creating a mobile-optimized website? <a href="contact.html" style="color: #00f5ff;">Get a free consultation</a> from our web development experts.</p>
@@ -1260,495 +1512,1396 @@
                 author: 'AI Solutions Team',
                 content: `
                     <h2>The Customer Service Revolution</h2>
-                    <p>AI chatbots are transforming how small businesses handle customer service. With 24/7 availability and instant responses, they're becoming indispensable tools for business growth.</p>
+                    <p>AI chatbots are transforming how small businesses handle customer service. With 24/7 availability and instant responses, Pakistani businesses can now provide exceptional customer support without breaking the bank.</p>
+                    
+                    <h3>Why AI Chatbots Are Game-Changers for Small Businesses</h3>
+                    <p>Small businesses in Pakistan face unique challenges in providing quality customer service:</p>
+                    <ul>
+                        <li>Limited staff and resources for 24/7 support</li>
+                        <li>High volume of repetitive customer queries</li>
+                        <li>Need for multilingual support (English, Urdu, regional languages)</li>
+                        <li>Cost constraints for hiring additional support staff</li>
+                    </ul>
                     
                     <h3>Key Benefits of AI Chatbots</h3>
                     <ul>
-                        <li>90% reduction in response time</li>
-                        <li>60% decrease in customer service costs</li>
-                        <li>24/7 availability for global customers</li>
-                        <li>Consistent service quality</li>
-                        <li>Multilingual support (English, Urdu, Punjabi)</li>
+                        <li><strong>24/7 Availability:</strong> Never miss a customer inquiry, even during holidays</li>
+                        <li><strong>Instant Responses:</strong> Reduce response times from hours to seconds</li>
+                        <li><strong>Cost Reduction:</strong> Handle 80% of routine queries without human intervention</li>
+                        <li><strong>Scalability:</strong> Handle multiple conversations simultaneously</li>
+                        <li><strong>Data Collection:</strong> Gather valuable customer insights automatically</li>
                     </ul>
                     
-                    <h3>Implementation Strategies</h3>
-                    <p>Successfully implementing chatbots requires careful planning:</p>
+                    <h3>Implementation Strategies for Pakistani Businesses</h3>
+                    <p>Here's how to successfully implement AI chatbots in your business:</p>
                     <ul>
-                        <li>Identify common customer queries and pain points</li>
-                        <li>Design conversation flows that feel natural</li>
-                        <li>Integrate with existing CRM systems</li>
-                        <li>Train the AI with your business-specific data</li>
-                        <li>Provide seamless handoff to human agents when needed</li>
+                        <li>Start with common FAQs and gradually expand capabilities</li>
+                        <li>Integrate with popular platforms (WhatsApp, Facebook Messenger, website)</li>
+                        <li>Provide seamless handoff to human agents for complex issues</li>
+                        <li>Regular training and updates based on customer interactions</li>
+                        <li>Multilingual support for better customer engagement</li>
                     </ul>
                     
-                    <h3>Real-World Success Stories</h3>
-                    <p>Pakistani businesses using AI chatbots have seen remarkable results:</p>
+                    <h3>Real Success Stories</h3>
+                    <p>Pakistani businesses using AI chatbots report:</p>
                     <ul>
-                        <li>E-commerce stores: 40% increase in conversion rates</li>
-                        <li>Service businesses: 70% reduction in phone calls</li>
-                        <li>Educational institutions: 80% faster query resolution</li>
+                        <li>90% reduction in response times</li>
+                        <li>60% decrease in support costs</li>
+                        <li>40% increase in customer satisfaction scores</li>
+                        <li>300% improvement in lead qualification efficiency</li>
                     </ul>
                     
-                    <p>Ready to implement AI chatbots for your business? <a href="contact.html" style="color: #00f5ff;">Contact our AI specialists</a> for a custom solution.</p>
+                    <h3>Best Practices for Chatbot Implementation</h3>
+                    <ul>
+                        <li>Design conversational flows that feel natural</li>
+                        <li>Set clear expectations about chatbot capabilities</li>
+                        <li>Regularly analyze and optimize conversation paths</li>
+                        <li>Maintain a consistent brand voice and personality</li>
+                        <li>Provide easy escalation options to human agents</li>
+                    </ul>
+                    
+                    <p>Ready to transform your customer service with AI? <a href="contact.html" style="color: #00f5ff;">Contact us</a> for a custom chatbot solution.</p>
+                `
+            },
+            'local-seo-pakistan-2025': {
+                title: 'Local SEO Mastery: Ranking Higher in Pakistani Search Results',
+                category: 'SEO Tips',
+                date: 'December 8, 2024',
+                readTime: '6 min read',
+                author: 'SEO Specialists',
+                content: `
+                    <h2>Dominating Local Search in Pakistan</h2>
+                    <p>Local SEO is crucial for Pakistani businesses, with 80% of local searches leading to purchases within 24 hours. Here's your complete guide to local SEO mastery.</p>
+                    
+                    <h3>Understanding Pakistani Search Behavior</h3>
+                    <p>Pakistani users have unique search patterns:</p>
+                    <ul>
+                        <li>Heavy use of location-specific keywords in both English and Urdu</li>
+                        <li>Voice searches increasing by 150% annually</li>
+                        <li>Mobile searches dominating local business queries</li>
+                        <li>High engagement with Google My Business listings</li>
+                    </ul>
+                    
+                    <h3>Google My Business Optimization</h3>
+                    <p>Your GMB profile is the foundation of local SEO success:</p>
+                    <ul>
+                        <li>Complete all profile sections with accurate information</li>
+                        <li>Add high-quality photos of your business, products, and team</li>
+                        <li>Regularly post updates, offers, and announcements</li>
+                        <li>Respond promptly to all customer reviews</li>
+                        <li>Use relevant local keywords in your business description</li>
+                    </ul>
+                    
+                    <h3>Local Keyword Strategy</h3>
+                    <p>Target keywords that Pakistani customers actually use:</p>
+                    <ul>
+                        <li>"[service] near me" variations</li>
+                        <li>City-specific keywords (Karachi, Lahore, Islamabad, etc.)</li>
+                        <li>Neighborhood and area-specific terms</li>
+                        <li>Local business category keywords</li>
+                        <li>Urdu translations of key service terms</li>
+                    </ul>
+                    
+                    <h3>Citation Building and NAP Consistency</h3>
+                    <p>Build authoritative local citations across relevant directories:</p>
+                    <ul>
+                        <li>Pakistani business directories (Rozee.pk, OLX, etc.)</li>
+                        <li>Industry-specific platforms</li>
+                        <li>Social media profiles with consistent NAP information</li>
+                        <li>Local chamber of commerce listings</li>
+                        <li>Regional business associations</li>
+                    </ul>
+                    
+                    <h3>Review Management Strategy</h3>
+                    <p>Customer reviews significantly impact local rankings:</p>
+                    <ul>
+                        <li>Actively encourage satisfied customers to leave reviews</li>
+                        <li>Respond professionally to all reviews, positive and negative</li>
+                        <li>Address customer concerns promptly and publicly</li>
+                        <li>Use review keywords naturally in your responses</li>
+                        <li>Monitor reviews across all platforms regularly</li>
+                    </ul>
+                    
+                    <h3>Local Content Marketing</h3>
+                    <p>Create content that resonates with local audiences:</p>
+                    <ul>
+                        <li>Local event coverage and participation</li>
+                        <li>Community involvement and sponsorships</li>
+                        <li>City-specific guides and resources</li>
+                        <li>Local customer success stories and testimonials</li>
+                        <li>Regional industry insights and trends</li>
+                    </ul>
+                    
+                    <h3>Technical Local SEO</h3>
+                    <p>Optimize your website's technical elements for local search:</p>
+                    <ul>
+                        <li>Schema markup for local business information</li>
+                        <li>Location pages for multiple business locations</li>
+                        <li>Mobile-friendly website design</li>
+                        <li>Fast loading speeds for mobile users</li>
+                        <li>SSL certificate for secure browsing</li>
+                    </ul>
+                    
+                    <p>Need help dominating local search results? <a href="contact.html" style="color: #00f5ff;">Get a free local SEO audit</a> today.</p>
+                `
+            },
+            'digital-transformation-small-business': {
+                title: 'Digital Transformation Guide for Small Businesses in Pakistan',
+                category: 'Business Growth',
+                date: 'December 5, 2024',
+                readTime: '8 min read',
+                author: 'Business Strategy Team',
+                content: `
+                    <h2>The Digital Transformation Imperative</h2>
+                    <p>Digital transformation isn't just for large corporations anymore. Pakistani small businesses that embrace digital technologies are seeing 40% faster growth rates and significantly improved customer satisfaction.</p>
+                    
+                    <h3>Current State of Digital Adoption in Pakistan</h3>
+                    <p>Understanding where Pakistani SMEs stand in their digital journey:</p>
+                    <ul>
+                        <li>Only 35% of small businesses have a professional website</li>
+                        <li>60% rely solely on social media for online presence</li>
+                        <li>Limited adoption of digital payment systems</li>
+                        <li>Minimal use of data analytics for business decisions</li>
+                        <li>Growing recognition of digital necessity post-COVID</li>
+                    </ul>
+                    
+                    <h3>Phase 1: Digital Foundation (Months 1-3)</h3>
+                    <p>Start with essential digital infrastructure:</p>
+                    <ul>
+                        <li><strong>Professional Website:</strong> Mobile-responsive design with basic SEO</li>
+                        <li><strong>Google My Business:</strong> Complete profile with regular updates</li>
+                        <li><strong>Social Media Presence:</strong> Focus on 2-3 relevant platforms</li>
+                        <li><strong>Digital Payments:</strong> Enable online payment options</li>
+                        <li><strong>Email System:</strong> Professional email addresses and basic automation</li>
+                    </ul>
+                    
+                    <h3>Phase 2: Process Digitization (Months 4-6)</h3>
+                    <p>Streamline operations through digital tools:</p>
+                    <ul>
+                        <li><strong>Customer Management:</strong> CRM system for customer data</li>
+                        <li><strong>Inventory Management:</strong> Digital tracking and alerts</li>
+                        <li><strong>Financial Management:</strong> Accounting software integration</li>
+                        <li><strong>Communication Tools:</strong> Team collaboration platforms</li>
+                        <li><strong>Project Management:</strong> Task tracking and workflow automation</li>
+                    </ul>
+                    
+                    <h3>Phase 3: Digital Marketing (Months 7-9)</h3>
+                    <p>Expand your reach through digital marketing:</p>
+                    <ul>
+                        <li><strong>Search Engine Optimization:</strong> Local and organic search visibility</li>
+                        <li><strong>Content Marketing:</strong> Blog, videos, and social content strategy</li>
+                        <li><strong>Paid Advertising:</strong> Google Ads and social media campaigns</li>
+                        <li><strong>Email Marketing:</strong> Newsletter and customer retention campaigns</li>
+                        <li><strong>Analytics Setup:</strong> Track performance and ROI</li>
+                    </ul>
+                    
+                    <h3>Phase 4: Advanced Automation (Months 10-12)</h3>
+                    <p>Implement advanced digital solutions:</p>
+                    <ul>
+                        <li><strong>AI Chatbots:</strong> Automated customer service</li>
+                        <li><strong>Marketing Automation:</strong> Lead nurturing sequences</li>
+                        <li><strong>Data Analytics:</strong> Business intelligence and reporting</li>
+                        <li><strong>Integration Systems:</strong> Connect all digital tools</li>
+                        <li><strong>Mobile Apps:</strong> Customer-facing applications</li>
+                    </ul>
+                    
+                    <h3>Overcoming Common Challenges</h3>
+                    <p>Address typical obstacles Pakistani SMEs face:</p>
+                    <ul>
+                        <li><strong>Budget Constraints:</strong> Start small, scale gradually</li>
+                        <li><strong>Technical Skills Gap:</strong> Invest in training or outsource</li>
+                        <li><strong>Resistance to Change:</strong> Communicate benefits clearly</li>
+                        <li><strong>Cybersecurity Concerns:</strong> Implement basic security measures</li>
+                        <li><strong>Internet Connectivity:</strong> Have backup solutions ready</li>
+                    </ul>
+                    
+                    <h3>Measuring Digital Transformation Success</h3>
+                    <p>Key metrics to track your progress:</p>
+                    <ul>
+                        <li>Website traffic and conversion rates</li>
+                        <li>Online sales as percentage of total revenue</li>
+                        <li>Customer acquisition cost reduction</li>
+                        <li>Process efficiency improvements</li>
+                        <li>Customer satisfaction scores</li>
+                        <li>Employee productivity metrics</li>
+                    </ul>
+                    
+                    <h3>ROI Expectations</h3>
+                    <p>Typical returns Pakistani businesses see from digital transformation:</p>
+                    <ul>
+                        <li>25-40% increase in operational efficiency</li>
+                        <li>30-50% growth in customer base</li>
+                        <li>20-35% reduction in operational costs</li>
+                        <li>50-80% improvement in customer response times</li>
+                    </ul>
+                    
+                    <p>Ready to start your digital transformation journey? <a href="contact.html" style="color: #00f5ff;">Schedule a strategy consultation</a> with our experts.</p>
+                `
+            },
+            'website-speed-optimization': {
+                title: 'Website Speed Optimization: Boost Your Site Performance by 300%',
+                category: 'Web Development',
+                date: 'December 3, 2024',
+                readTime: '6 min read',
+                author: 'Performance Team',
+                content: `
+                    <h2>Why Website Speed Matters More Than Ever</h2>
+                    <p>In Pakistan's diverse internet landscape, website speed can make or break your business. With varying connection speeds across urban and rural areas, optimization is crucial for reaching all potential customers.</p>
+                    
+                    <h3>The Impact of Site Speed on Business</h3>
+                    <p>Research shows that even small improvements in loading speed can have massive impacts:</p>
+                    <ul>
+                        <li>1-second delay = 7% reduction in conversions</li>
+                        <li>3-second loading time = 32% higher bounce rate</li>
+                        <li>Fast websites rank higher in Google search results</li>
+                        <li>Mobile users expect pages to load in under 2 seconds</li>
+                        <li>Speed improvements directly correlate with revenue growth</li>
+                    </ul>
+                    
+                    <h3>Core Web Vitals Optimization</h3>
+                    <p>Focus on Google's Core Web Vitals for better search rankings:</p>
+                    <ul>
+                        <li><strong>Largest Contentful Paint (LCP):</strong> Target under 2.5 seconds</li>
+                        <li><strong>First Input Delay (FID):</strong> Keep under 100 milliseconds</li>
+                        <li><strong>Cumulative Layout Shift (CLS):</strong> Maintain under 0.1</li>
+                        <li><strong>First Contentful Paint (FCP):</strong> Optimize for under 1.8 seconds</li>
+                    </ul>
+                    
+                    <h3>Image Optimization Strategies</h3>
+                    <p>Images often account for 60-70% of page weight:</p>
+                    <ul>
+                        <li>Use WebP format for 25-50% smaller file sizes</li>
+                        <li>Implement lazy loading for below-the-fold images</li>
+                        <li>Optimize image dimensions for different screen sizes</li>
+                        <li>Compress images without sacrificing quality</li>
+                        <li>Use SVG for icons and simple graphics</li>
+                        <li>Implement responsive images with srcset attribute</li>
+                    </ul>
+                    
+                    <h3>Server and Hosting Optimization</h3>
+                    <p>Your hosting choice significantly impacts performance:</p>
+                    <ul>
+                        <li>Choose servers with Pakistani data centers</li>
+                        <li>Implement Content Delivery Network (CDN)</li>
+                        <li>Enable Gzip compression for text files</li>
+                        <li>Use HTTP/2 for faster data transfer</li>
+                        <li>Optimize server response times (TTFB under 200ms)</li>
+                        <li>Configure proper caching headers</li>
+                    </ul>
+                    
+                    <h3>Code Optimization Techniques</h3>
+                    <p>Clean, efficient code loads faster:</p>
+                    <ul>
+                        <li>Minify CSS, JavaScript, and HTML files</li>
+                        <li>Remove unused CSS and JavaScript</li>
+                        <li>Defer non-critical JavaScript loading</li>
+                        <li>Inline critical CSS for faster rendering</li>
+                        <li>Reduce the number of HTTP requests</li>
+                        <li>Optimize database queries for dynamic content</li>
+                    </ul>
+                    
+                    <h3>Caching Strategies</h3>
+                    <p>Implement comprehensive caching for dramatic speed improvements:</p>
+                    <ul>
+                        <li><strong>Browser Caching:</strong> Set appropriate cache headers</li>
+                        <li><strong>Server-side Caching:</strong> Use Redis or Memcached</li>
+                        <li><strong>CDN Caching:</strong> Cache static assets globally</li>
+                        <li><strong>Page Caching:</strong> Serve pre-generated HTML pages</li>
+                        <li><strong>Database Caching:</strong> Cache frequent database queries</li>
+                    </ul>
+                    
+                    <h3>Mobile Performance Optimization</h3>
+                    <p>With 85% of Pakistani users on mobile, mobile optimization is critical:</p>
+                    <ul>
+                        <li>Implement Accelerated Mobile Pages (AMP)</li>
+                        <li>Optimize for slower 3G and 4G networks</li>
+                        <li>Reduce mobile-specific resource loading</li>
+                        <li>Prioritize above-the-fold content loading</li>
+                        <li>Minimize redirects and pop-ups</li>
+                    </ul>
+                    
+                    <h3>Performance Monitoring Tools</h3>
+                    <p>Use these tools to track and maintain optimal performance:</p>
+                    <ul>
+                        <li>Google PageSpeed Insights for comprehensive analysis</li>
+                        <li>GTmetrix for detailed performance reports</li>
+                        <li>WebPageTest for real-world testing conditions</li>
+                        <li>Google Analytics for user experience metrics</li>
+                        <li>Chrome DevTools for development testing</li>
+                    </ul>
+                    
+                    <h3>Quick Wins Checklist</h3>
+                    <p>Implement these changes for immediate improvements:</p>
+                    <ul>
+                        <li>Enable Gzip compression (30-70% size reduction)</li>
+                        <li>Optimize images (50-80% faster loading)</li>
+                        <li>Minify CSS and JavaScript (10-20% improvement)</li>
+                        <li>Enable browser caching (2-5x faster repeat visits)</li>
+                        <li>Use a CDN (30-50% faster global loading)</li>
+                        <li>Remove unnecessary plugins and widgets</li>
+                    </ul>
+                    
+                    <p>Need professional speed optimization? <a href="contact.html" style="color: #00f5ff;">Get a free website speed audit</a> from our performance experts.</p>
+                `
+            },
+            'social-media-marketing-pakistan': {
+                title: 'Social Media Marketing Strategies That Work in Pakistan\'s Digital Landscape',
+                category: 'Digital Marketing',
+                date: 'December 1, 2024',
+                readTime: '7 min read',
+                author: 'Social Media Team',
+                content: `
+                    <h2>Pakistan's Social Media Boom</h2>
+                    <p>With over 50 million active social media users, Pakistan represents one of the world's fastest-growing social media markets. Understanding local preferences and behaviors is key to success.</p>
+                    
+                    <h3>Platform-Specific Strategies</h3>
+                    
+                    <h4>Facebook Marketing in Pakistan</h4>
+                    <p>Facebook dominates with 45+ million users:</p>
+                    <ul>
+                        <li>Peak engagement: 7-9 PM and 12-2 PM</li>
+                        <li>Video content gets 6x more engagement than images</li>
+                        <li>Local language content performs 3x better</li>
+                        <li>Community groups drive significant organic reach</li>
+                        <li>Facebook Marketplace for e-commerce businesses</li>
+                    </ul>
+                    
+                    <h4>Instagram Growth Tactics</h4>
+                    <p>Instagram's younger demographic (18-35) offers huge potential:</p>
+                    <ul>
+                        <li>Stories and Reels drive 80% of engagement</li>
+                        <li>Behind-the-scenes content builds authentic connections</li>
+                        <li>User-generated content campaigns work exceptionally well</li>
+                        <li>Local hashtags increase discoverability by 12x</li>
+                        <li>Shopping features for direct sales conversion</li>
+                    </ul>
+                    
+                    <h4>LinkedIn for B2B Success</h4>
+                    <p>LinkedIn is growing rapidly among Pakistani professionals:</p>
+                    <ul>
+                        <li>Industry insights and thought leadership content</li>
+                        <li>Company updates and employee advocacy</li>
+                        <li>Networking with industry leaders and potential clients</li>
+                        <li>Professional service businesses see 5x higher conversion rates</li>
+                    </ul>
+                    
+                    <h4>TikTok and YouTube Strategies</h4>
+                    <p>Video platforms are exploding in popularity:</p>
+                    <ul>
+                        <li>Short-form educational content performs best</li>
+                        <li>Local trends and challenges drive viral growth</li>
+                        <li>Consistent posting schedule builds loyal audiences</li>
+                        <li>Collaborations with local creators expand reach</li>
+                    </ul>
+                    
+                    <h3>Content Strategy Framework</h3>
+                    
+                    <h4>The 80/20 Rule for Pakistani Audiences</h4>
+                    <ul>
+                        <li>80% valuable, entertaining, or educational content</li>
+                        <li>20% promotional or sales-focused content</li>
+                        <li>Focus on solving customer problems</li>
+                        <li>Share behind-the-scenes business stories</li>
+                        <li>Celebrate local festivals and cultural events</li>
+                    </ul>
+                    
+                    <h4>Visual Content Guidelines</h4>
+                    <ul>
+                        <li>High-quality images with consistent brand colors</li>
+                        <li>Video subtitles for accessibility and silent viewing</li>
+                        <li>Local cultural elements in visual design</li>
+                        <li>Infographics with Urdu text for broader reach</li>
+                        <li>User-generated content for authenticity</li>
+                    </ul>
+                    
+                    <h3>Audience Engagement Tactics</h3>
+                    
+                    <h4>Building Community</h4>
+                    <ul>
+                        <li>Respond to comments within 2-4 hours</li>
+                        <li>Ask questions to encourage discussion</li>
+                        <li>Share customer success stories and testimonials</li>
+                        <li>Create exclusive content for loyal followers</li>
+                        <li>Host live Q&A sessions and virtual events</li>
+                    </ul>
+                    
+                    <h4>Influencer Collaboration</h4>
+                    <p>Influencer marketing ROI in Pakistan averages 4:1:</p>
+                    <ul>
+                        <li>Micro-influencers (10K-100K followers) often outperform celebrities</li>
+                        <li>Authentic partnerships over one-off sponsored posts</li>
+                        <li>Local influencers understand cultural nuances better</li>
+                        <li>Employee advocacy programs for B2B businesses</li>
+                        <li>Track engagement rates, not just follower counts</li>
+                    </ul>
+                    
+                    <h3>Social Commerce Integration</h3>
+                    <p>Social selling is becoming mainstream in Pakistan:</p>
+                    <ul>
+                        <li>WhatsApp Business for direct customer communication</li>
+                        <li>Instagram Shopping for visual product discovery</li>
+                        <li>Facebook Shops for comprehensive e-commerce</li>
+                        <li>Live shopping events for real-time engagement</li>
+                        <li>Social proof through reviews and testimonials</li>
+                    </ul>
+                    
+                    <h3>Analytics and Performance Tracking</h3>
+                    
+                    <h4>Key Metrics to Monitor</h4>
+                    <ul>
+                        <li><strong>Engagement Rate:</strong> Comments, likes, shares per post</li>
+                        <li><strong>Reach and Impressions:</strong> Content visibility metrics</li>
+                        <li><strong>Click-through Rate:</strong> Traffic driven to website</li>
+                        <li><strong>Conversion Rate:</strong> Social media to sales conversion</li>
+                        <li><strong>Customer Acquisition Cost:</strong> Cost per new customer</li>
+                        <li><strong>Brand Mention Sentiment:</strong> Positive vs. negative mentions</li>
+                    </ul>
+                    
+                    <h4>Tools for Pakistani Businesses</h4>
+                    <ul>
+                        <li>Meta Business Suite for Facebook and Instagram</li>
+                        <li>Hootsuite or Buffer for content scheduling</li>
+                        <li>Canva for creating professional graphics</li>
+                        <li>Google Analytics for website traffic tracking</li>
+                        <li>Social media listening tools for brand monitoring</li>
+                    </ul>
+                    
+                    <h3>Crisis Management and Reputation</h3>
+                    <p>Handle negative feedback professionally:</p>
+                    <ul>
+                        <li>Respond quickly and empathetically to complaints</li>
+                        <li>Take serious conversations to private messages</li>
+                        <li>Acknowledge mistakes and provide solutions</li>
+                        <li>Monitor brand mentions across all platforms</li>
+                        <li>Build positive review campaigns proactively</li>
+                    </ul>
+                    
+                    <h3>Budget Allocation Guide</h3>
+                    <p>Recommended budget distribution for Pakistani SMEs:</p>
+                    <ul>
+                        <li>40% - Content creation and design</li>
+                        <li>30% - Paid advertising campaigns</li>
+                        <li>20% - Influencer partnerships and collaborations</li>
+                        <li>10% - Social media management tools and analytics</li>
+                    </ul>
+                    
+                    <p>Ready to dominate social media in Pakistan? <a href="contact.html" style="color: #00f5ff;">Get a custom social media strategy</a> tailored to your business.</p>
+                `
+            },
+            'ai-automation-business-processes': {
+                title: 'AI Automation: Streamlining Business Processes for Maximum Efficiency',
+                category: 'AI & Chatbots',
+                date: 'November 28, 2024',
+                readTime: '5 min read',
+                author: 'Automation Team',
+                content: `
+                    <h2>The Automation Revolution</h2>
+                    <p>AI automation is no longer science fiction—it's a business necessity. Pakistani companies implementing AI automation report 45% efficiency gains and 30% cost reductions within the first year.</p>
+                    
+                    <h3>What is AI Automation?</h3>
+                    <p>AI automation combines artificial intelligence with process automation to:</p>
+                    <ul>
+                        <li>Eliminate repetitive, manual tasks</li>
+                        <li>Make intelligent decisions based on data</li>
+                        <li>Learn and improve processes over time</li>
+                        <li>Integrate seamlessly with existing systems</li>
+                        <li>Scale operations without proportional staff increases</li>
+                    </ul>
+                    
+                    <h3>Key Areas for Business Process Automation</h3>
+                    
+                    <h4>Customer Service Automation</h4>
+                    <ul>
+                        <li>AI chatbots for 24/7 customer support</li>
+                        <li>Automated ticket routing and prioritization</li>
+                        <li>Intelligent FAQ systems that learn from interactions</li>
+                        <li>Sentiment analysis for proactive customer care</li>
+                        <li>Automated follow-up sequences</li>
+                    </ul>
+                    
+                    <h4>Sales and Marketing Automation</h4>
+                    <ul>
+                        <li>Lead scoring and qualification</li>
+                        <li>Personalized email marketing campaigns</li>
+                        <li>Social media posting and engagement</li>
+                        <li>Dynamic pricing optimization</li>
+                        <li>Customer journey mapping and optimization</li>
+                    </ul>
+                    
+                    <h4>Operations and Administrative Tasks</h4>
+                    <ul>
+                        <li>Invoice processing and payment reminders</li>
+                        <li>Inventory management and reordering</li>
+                        <li>Employee onboarding workflows</li>
+                        <li>Data entry and validation</li>
+                        <li>Report generation and distribution</li>
+                    </ul>
+                    
+                    <h4>Human Resources Automation</h4>
+                    <ul>
+                        <li>Resume screening and candidate matching</li>
+                        <li>Interview scheduling and coordination</li>
+                        <li>Employee performance tracking</li>
+                        <li>Payroll processing and compliance</li>
+                        <li>Leave management and approval workflows</li>
+                    </ul>
+                    
+                    <h3>Implementation Strategy</h3>
+                    
+                    <h4>Phase 1: Assessment and Planning</h4>
+                    <ul>
+                        <li>Identify repetitive, rule-based processes</li>
+                        <li>Calculate current process costs and time investment</li>
+                        <li>Prioritize processes by ROI potential</li>
+                        <li>Set realistic automation goals and timelines</li>
+                        <li>Secure stakeholder buy-in and support</li>
+                    </ul>
+                    
+                    <h4>Phase 2: Pilot Implementation</h4>
+                    <ul>
+                        <li>Start with one simple, high-impact process</li>
+                        <li>Choose user-friendly automation tools</li>
+                        <li>Train staff on new automated workflows</li>
+                        <li>Monitor performance and gather feedback</li>
+                        <li>Iterate and optimize based on results</li>
+                    </ul>
+                    
+                    <h4>Phase 3: Scaling and Integration</h4>
+                    <ul>
+                        <li>Gradually expand to additional processes</li>
+                        <li>Integrate automated systems for seamless workflows</li>
+                        <li>Develop custom solutions for unique business needs</li>
+                        <li>Establish governance and compliance protocols</li>
+                        <li>Create change management strategies</li>
+                    </ul>
+                    
+                    <h3>Popular AI Automation Tools</h3>
+                    
+                    <h4>For Small Businesses</h4>
+                    <ul>
+                        <li><strong>Zapier:</strong> Connect apps and automate workflows</li>
+                        <li><strong>Chatfuel:</strong> Build AI chatbots without coding</li>
+                        <li><strong>Mailchimp:</strong> Email marketing automation</li>
+                        <li><strong>HubSpot:</strong> CRM and sales automation</li>
+                        <li><strong>IFTTT:</strong> Simple trigger-based automation</li>
+                    </ul>
+                    
+                    <h4>For Growing Businesses</h4>
+                    <ul>
+                        <li><strong>Microsoft Power Automate:</strong> Enterprise workflow automation</li>
+                        <li><strong>Salesforce Einstein:</strong> AI-powered CRM automation</li>
+                        <li><strong>UiPath:</strong> Robotic Process Automation (RPA)</li>
+                        <li><strong>Integromat (Make):</strong> Advanced workflow automation</li>
+                        <li><strong>Dialogflow:</strong> Conversational AI platform</li>
+                    </ul>
+                    
+                    <h3>Measuring Automation Success</h3>
+                    
+                    <h4>Key Performance Indicators</h4>
+                    <ul>
+                        <li><strong>Time Savings:</strong> Hours saved per week/month</li>
+                        <li><strong>Cost Reduction:</strong> Operational cost decrease</li>
+                        <li><strong>Error Reduction:</strong> Decrease in human errors</li>
+                        <li><strong>Customer Satisfaction:</strong> Improved response times and quality</li>
+                        <li><strong>Employee Satisfaction:</strong> Reduced repetitive work burden</li>
+                        <li><strong>ROI:</strong> Return on automation investment</li>
+                    </ul>
+                    
+                    <h4>Expected Results Timeline</h4>
+                    <ul>
+                        <li><strong>Month 1-2:</strong> Initial setup and team training</li>
+                        <li><strong>Month 3-4:</strong> 20-30% efficiency improvements</li>
+                        <li><strong>Month 6:</strong> 40-50% process optimization</li>
+                        <li><strong>Month 12:</strong> Full ROI realization and scaling</li>
+                    </ul>
+                    
+                    <h3>Common Challenges and Solutions</h3>
+                    
+                    <h4>Employee Resistance</h4>
+                    <ul>
+                        <li>Communicate automation as enhancement, not replacement</li>
+                        <li>Involve staff in automation planning and implementation</li>
+                        <li>Provide comprehensive training and support</li>
+                        <li>Highlight how automation frees time for creative work</li>
+                        <li>Celebrate early wins and success stories</li>
+                    </ul>
+                    
+                    <h4>Technical Integration Issues</h4>
+                    <ul>
+                        <li>Start with simple, standalone automations</li>
+                        <li>Ensure robust data backup before implementation</li>
+                        <li>Work with experienced automation consultants</li>
+                        <li>Test thoroughly in non-production environments</li>
+                        <li>Have rollback plans for critical processes</li>
+                    </ul>
+                    
+                    <h3>Future of AI Automation</h3>
+                    <p>Emerging trends shaping the automation landscape:</p>
+                    <ul>
+                        <li>Hyperautomation combining multiple AI technologies</li>
+                        <li>Low-code/no-code platforms for citizen developers</li>
+                        <li>Intelligent document processing and understanding</li>
+                        <li>Predictive automation based on historical patterns</li>
+                        <li>Voice-activated automation interfaces</li>
+                    </ul>
+                    
+                    <p>Ready to automate your business processes? <a href="contact.html" style="color: #00f5ff;">Schedule an automation consultation</a> to identify your best opportunities.</p>
+                `
+            },
+            'content-marketing-seo-strategy': {
+                title: 'Content Marketing & SEO: Creating Content That Ranks and Converts',
+                category: 'SEO Tips',
+                date: 'November 25, 2024',
+                readTime: '6 min read',
+                author: 'Content Strategy Team',
+                content: `
+                    <h2>The Perfect Marriage: Content Marketing and SEO</h2>
+                    <p>Content marketing and SEO are inseparable in today's digital landscape. Pakistani businesses that master both see 13x more traffic and 6x higher conversion rates than those focusing on just one.</p>
+                    
+                    <h3>Understanding the Content-SEO Connection</h3>
+                    <p>Great content marketing and SEO share common goals:</p>
+                    <ul>
+                        <li>Providing valuable, relevant information to users</li>
+                        <li>Building authority and trust in your industry</li>
+                        <li>Attracting and engaging your target audience</li>
+                        <li>Driving organic traffic and qualified leads</li>
+                        <li>Creating long-term, sustainable growth</li>
+                    </ul>
+                    
+                    <h3>Keyword Research for Content Creation</h3>
+                    
+                    <h4>Understanding Pakistani Search Behavior</h4>
+                    <ul>
+                        <li>Mix of English and Urdu search queries</li>
+                        <li>Local intent keywords ("near me", city names)</li>
+                        <li>Mobile-first search patterns</li>
+                        <li>Voice search increasing in local languages</li>
+                        <li>Commercial intent variations unique to Pakistani market</li>
+                    </ul>
+                    
+                    <h4>Keyword Research Tools and Techniques</h4>
+                    <ul>
+                        <li>Google Keyword Planner for search volume data</li>
+                        <li>Answer The Public for question-based content ideas</li>
+                        <li>Google Trends for seasonal and trending topics</li>
+                        <li>Competitor analysis for content gap identification</li>
+                        <li>Social media listening for emerging topics</li>
+                    </ul>
+                    
+                    <h4>Content Cluster Strategy</h4>
+                    <ul>
+                        <li>Create pillar pages for broad topics</li>
+                        <li>Develop cluster content around specific subtopics</li>
+                        <li>Internal linking to show content relationships</li>
+                        <li>Regular updates to maintain freshness</li>
+                        <li>Cross-promotion across different content formats</li>
+                    </ul>
+                    
+                    <h3>Content Types That Perform Well in Pakistan</h3>
+                    
+                    <h4>Educational Content</h4>
+                    <ul>
+                        <li>How-to guides and tutorials</li>
+                        <li>Industry insights and analysis</li>
+                        <li>Best practices and tips</li>
+                        <li>Problem-solving content</li>
+                        <li>Frequently asked questions</li>
+                    </ul>
+                    
+                    <h4>Local and Cultural Content</h4>
+                    <ul>
+                        <li>Pakistan-specific case studies</li>
+                        <li>Local market analysis and trends</li>
+                        <li>Cultural event tie-ins and seasonal content</li>
+                        <li>Regional business spotlights</li>
+                        <li>Local language content for broader reach</li>
+                    </ul>
+                    
+                    <h4>Visual and Interactive Content</h4>
+                    <ul>
+                        <li>Infographics with Pakistani data and statistics</li>
+                        <li>Video tutorials and explainers</li>
+                        <li>Interactive tools and calculators</li>
+                        <li>Before/after case studies</li>
+                        <li>Live webinars and Q&A sessions</li>
+                    </ul>
+                    
+                    <h3>On-Page SEO for Content Optimization</h3>
+                    
+                    <h4>Technical SEO Elements</h4>
+                    <ul>
+                        <li>Title tags with primary keywords (under 60 characters)</li>
+                        <li>Meta descriptions that encourage clicks (under 160 characters)</li>
+                        <li>Header tags (H1, H2, H3) for content structure</li>
+                        <li>URL optimization with descriptive slugs</li>
+                        <li>Schema markup for rich snippets</li>
+                        <li>Internal linking strategy for topic authority</li>
+                    </ul>
+                    
+                    <h4>Content Optimization Best Practices</h4>
+                    <ul>
+                        <li>Natural keyword integration (1-2% density)</li>
+                        <li>LSI keywords for semantic relevance</li>
+                        <li>Comprehensive content covering user intent</li>
+                        <li>Mobile-optimized formatting and readability</li>
+                        <li>Fast loading times for better user experience</li>
+                        <li>Regular content updates and improvements</li>
+                    </ul>
+                    
+                    <h3>Content Distribution and Promotion</h3>
+                    
+                    <h4>Owned Media Channels</h4>
+                    <ul>
+                        <li>Company blog and website</li>
+                        <li>Email newsletter distribution</li>
+                        <li>Employee social media advocacy</li>
+                        <li>Customer communication touchpoints</li>
+                        <li>Sales team content sharing</li>
+                    </ul>
+                    
+                    <h4>Earned Media Opportunities</h4>
+                    <ul>
+                        <li>Guest posting on industry websites</li>
+                        <li>Podcast appearances and interviews</li>
+                        <li>Industry publication contributions</li>
+                        <li>Speaking at local events and conferences</li>
+                        <li>Collaboration with other businesses</li>
+                    </ul>
+                    
+                    <h4>Paid Media Amplification</h4>
+                    <ul>
+                        <li>Social media promoted posts</li>
+                        <li>Google Ads for high-performing content</li>
+                        <li>Influencer partnerships for content distribution</li>
+                        <li>Native advertising on relevant platforms</li>
+                        <li>Retargeting campaigns for content engagement</li>
+                    </ul>
+                    
+                    <h3>Measuring Content Marketing Success</h3>
+                    
+                    <h4>SEO Performance Metrics</h4>
+                    <ul>
+                        <li><strong>Organic Traffic:</strong> Visitors from search engines</li>
+                        <li><strong>Keyword Rankings:</strong> Position for target keywords</li>
+                        <li><strong>Click-Through Rate:</strong> Search result click percentage</li>
+                        <li><strong>Backlink Quality:</strong> Authority and relevance of linking sites</li>
+                        <li><strong>Page Authority:</strong> Individual page ranking strength</li>
+                    </ul>
+                    
+                    <h4>Content Engagement Metrics</h4>
+                    <ul>
+                        <li><strong>Time on Page:</strong> User engagement depth</li>
+                        <li><strong>Bounce Rate:</strong> Single-page visit percentage</li>
+                        <li><strong>Social Shares:</strong> Content virality indicator</li>
+                        <li><strong>Comments and Interactions:</strong> Community engagement</li>
+                        <li><strong>Return Visitors:</strong> Content loyalty measurement</li>
+                    </ul>
+                    
+                    <h4>Business Impact Metrics</h4>
+                    <ul>
+                        <li><strong>Lead Generation:</strong> Content-driven lead quality and quantity</li>
+                        <li><strong>Conversion Rate:</strong> Content to customer conversion</li>
+                        <li><strong>Customer Acquisition Cost:</strong> Content marketing efficiency</li>
+                        <li><strong>Brand Awareness:</strong> Search volume for brand terms</li>
+                        <li><strong>Customer Lifetime Value:</strong> Long-term content impact</li>
+                    </ul>
+                    
+                    <h3>Advanced Content SEO Strategies</h3>
+                    
+                    <h4>Featured Snippet Optimization</h4>
+                    <ul>
+                        <li>Structure content to answer specific questions</li>
+                        <li>Use numbered lists and bullet points</li>
+                        <li>Include definition-style paragraphs</li>
+                        <li>Optimize for "how to," "what is," and "why" queries</li>
+                        <li>Monitor and optimize for position zero opportunities</li>
+                    </ul>
+                    
+                    <h4>E-A-T (Expertise, Authoritativeness, Trustworthiness)</h4>
+                    <ul>
+                        <li>Author bios with credentials and expertise</li>
+                        <li>Regular content updates with fresh information</li>
+                        <li>Fact-checking and citing authoritative sources</li>
+                        <li>Building industry recognition and awards</li>
+                        <li>Customer testimonials and case studies</li>
+                    </ul>
+                    
+                    <h3>Content Calendar and Planning</h3>
+                    
+                    <h4>Strategic Content Planning</h4>
+                    <ul>
+                        <li>Quarterly content themes aligned with business goals</li>
+                        <li>Seasonal content for Pakistani holidays and events</li>
+                        <li>Industry event and conference tie-ins</li>
+                        <li>Product launch and company milestone content</li>
+                        <li>Evergreen content for long-term traffic generation</li>
+                    </ul>
+                    
+                    <h4>Content Production Workflow</h4>
+                    <ul>
+                        <li>Research and keyword validation phase</li>
+                        <li>Content creation and optimization process</li>
+                        <li>Review and editing for quality assurance</li>
+                        <li>SEO optimization and technical checks</li>
+                        <li>Publication and promotion strategy execution</li>
+                        <li>Performance monitoring and optimization</li>
+                    </ul>
+                    
+                    <p>Ready to create content that dominates search results? <a href="contact.html" style="color: #00f5ff;">Get your content marketing strategy</a> developed by our experts.</p>
+                `
+            },
+            'ecommerce-growth-strategies': {
+                title: 'E-commerce Growth Strategies: From Startup to Market Leader',
+                category: 'Business Growth',
+                date: 'November 22, 2024',
+                readTime: '7 min read',
+                author: 'E-commerce Team',
+                content: `
+                    <h2>Pakistan's E-commerce Boom</h2>
+                    <p>Pakistan's e-commerce market is projected to reach $9.6 billion by 2025. With the right strategies, your online business can capture a significant share of this growing market.</p>
+                    
+                    <h3>Understanding the Pakistani E-commerce Landscape</h3>
+                    <p>Key factors shaping online shopping in Pakistan:</p>
+                    <ul>
+                        <li>Mobile commerce accounts for 70% of online transactions</li>
+                        <li>Cash on delivery remains the preferred payment method</li>
+                        <li>Social commerce through Facebook and Instagram is growing rapidly</li>
+                        <li>Trust and security are major customer concerns</li>
+                        <li>Fast delivery expectations, especially in major cities</li>
+                    </ul>
+                    
+                    <h3>Phase 1: Foundation Building (Months 1-6)</h3>
+                    
+                    <h4>E-commerce Platform Selection</h4>
+                    <ul>
+                        <li><strong>Shopify:</strong> User-friendly with Pakistani payment gateways</li>
+                        <li><strong>WooCommerce:</strong> Cost-effective WordPress integration</li>
+                        <li><strong>Magento:</strong> Scalable for large product catalogs</li>
+                        <li><strong>Custom Development:</strong> Tailored for unique business needs</li>
+                    </ul>
+                    
+                    <h4>Essential Website Features</h4>
+                    <ul>
+                        <li>Mobile-responsive design optimized for Pakistani networks</li>
+                        <li>Multiple payment options (JazzCash, EasyPaisa, bank transfer)</li>
+                        <li>Cash on delivery integration with tracking</li>
+                        <li>Multi-language support (English and Urdu)</li>
+                        <li>SSL security and trust badges</li>
+                        <li>Live chat support for customer queries</li>
+                    </ul>
+                    
+                    <h4>Product Strategy</h4>
+                    <ul>
+                        <li>High-quality product photography from multiple angles</li>
+                        <li>Detailed product descriptions with specifications</li>
+                        <li>Customer reviews and ratings system</li>
+                        <li>Stock level transparency</li>
+                        <li>Related product recommendations</li>
+                    </ul>
+                    
+                    <h3>Phase 2: Traffic Generation (Months 6-12)</h3>
+                    
+                    <h4>Search Engine Optimization</h4>
+                    <ul>
+                        <li>Product page optimization for relevant keywords</li>
+                        <li>Local SEO for "buy online in Pakistan" queries</li>
+                        <li>Category page optimization for broad search terms</li>
+                        <li>Blog content targeting buyer intent keywords</li>
+                        <li>Technical SEO for faster page loading</li>
+                    </ul>
+                    
+                    <h4>Social Media Marketing</h4>
+                    <ul>
+                        <li>Instagram and Facebook shopping integration</li>
+                        <li>Influencer partnerships with local content creators</li>
+                        <li>User-generated content campaigns</li>
+                        <li>Live streaming product demonstrations</li>
+                        <li>WhatsApp Business for direct customer communication</li>
+                    </ul>
+                    
+                    <h4>Paid Advertising Strategy</h4>
+                    <ul>
+                        <li>Google Shopping ads for product visibility</li>
+                        <li>Facebook and Instagram dynamic product ads</li>
+                        <li>Retargeting campaigns for cart abandoners</li>
+                        <li>YouTube video ads for brand awareness</li>
+                        <li>Google Ads for high-intent keywords</li>
+                    </ul>
+                    
+                    <h3>Phase 3: Conversion Optimization (Months 12-18)</h3>
+                    
+                    <h4>User Experience Enhancement</h4>
+                    <ul>
+                        <li>Simplified checkout process (maximum 3 steps)</li>
+                        <li>Guest checkout option</li>
+                        <li>Multiple shipping options with clear timelines</li>
+                        <li>Size guides and product comparison tools</li>
+                        <li>Exit-intent popups with discount offers</li>
+                    </ul>
+                    
+                    <h4>Trust Building Elements</h4>
+                    <ul>
+                        <li>Customer testimonials and success stories</li>
+                        <li>Security certifications and guarantees</li>
+                        <li>Clear return and refund policies</li>
+                        <li>Contact information and physical address</li>
+                        <li>Social proof through customer photos</li>
+                    </ul>
+                    
+                    <h4>Personalization Features</h4>
+                    <ul>
+                        <li>Product recommendations based on browsing history</li>
+                        <li>Personalized email marketing campaigns</li>
+                        <li>Dynamic pricing for different customer segments</li>
+                        <li>Wishlist and favorites functionality</li>
+                        <li>Recently viewed products section</li>
+                    </ul>
+                    
+                    <h3>Phase 4: Scaling and Expansion (Months 18+)</h3>
+                    
+                    <h4>Marketplace Integration</h4>
+                    <ul>
+                        <li>Daraz marketplace for broader reach</li>
+                        <li>Amazon Pakistan for international visibility</li>
+                        <li>Facebook and Instagram shops</li>
+                        <li>Industry-specific marketplaces</li>
+                        <li>B2B platforms for wholesale opportunities</li>
+                    </ul>
+                    
+                    <h4>International Expansion</h4>
+                    <ul>
+                        <li>Cross-border shipping solutions</li>
+                        <li>International payment gateway integration</li>
+                        <li>Multi-currency support</li>
+                        <li>Localized content for target markets</li>
+                        <li>Compliance with international regulations</li>
+                    </ul>
+                    
+                    <h4>Advanced Analytics and Automation</h4>
+                    <ul>
+                        <li>Advanced e-commerce tracking with Google Analytics 4</li>
+                        <li>Customer lifetime value analysis</li>
+                        <li>Inventory management automation</li>
+                        <li>Predictive analytics for demand forecasting</li>
+                        <li>AI-powered customer service chatbots</li>
+                    </ul>
+                    
+                    <h3>Customer Retention Strategies</h3>
+                    
+                    <h4>Loyalty Programs</h4>
+                    <ul>
+                        <li>Points-based rewards system</li>
+                        <li>Tiered membership benefits</li>
+                        <li>Exclusive access to new products</li>
+                        <li>Birthday and anniversary discounts</li>
+                        <li>Referral bonuses for customer acquisition</li>
+                    </ul>
+                    
+                    <h4>Email Marketing Automation</h4>
+                    <ul>
+                        <li>Welcome series for new customers</li>
+                        <li>Abandoned cart recovery sequences</li>
+                        <li>Post-purchase follow-up campaigns</li>
+                        <li>Re-engagement campaigns for inactive customers</li>
+                        <li>Seasonal and promotional newsletters</li>
+                    </ul>
+                    
+                    <h3>Key Performance Metrics</h3>
+                    
+                    <h4>Traffic and Acquisition Metrics</h4>
+                    <ul>
+                        <li><strong>Website Traffic:</strong> Monthly unique visitors</li>
+                        <li><strong>Traffic Sources:</strong> Organic, paid, social, direct</li>
+                        <li><strong>Cost Per Acquisition:</strong> Customer acquisition cost by channel</li>
+                        <li><strong>Return on Ad Spend:</strong> Revenue generated per advertising dollar</li>
+                    </ul>
+                    
+                    <h4>Conversion and Revenue Metrics</h4>
+                    <ul>
+                        <li><strong>Conversion Rate:</strong> Percentage of visitors who purchase</li>
+                        <li><strong>Average Order Value:</strong> Average transaction amount</li>
+                        <li><strong>Cart Abandonment Rate:</strong> Percentage of incomplete purchases</li>
+                        <li><strong>Revenue Per Visitor:</strong> Total revenue divided by unique visitors</li>
+                    </ul>
+                    
+                    <h4>Customer Metrics</h4>
+                    <ul>
+                        <li><strong>Customer Lifetime Value:</strong> Total value of customer relationship</li>
+                        <li><strong>Repeat Purchase Rate:</strong> Percentage of customers who buy again</li>
+                        <li><strong>Customer Satisfaction Score:</strong> Post-purchase satisfaction ratings</li>
+                        <li><strong>Net Promoter Score:</strong> Likelihood of customer recommendations</li>
+                    </ul>
+                    
+                    <h3>Common Challenges and Solutions</h3>
+                    
+                    <h4>Payment and Trust Issues</h4>
+                    <ul>
+                        <li>Offer multiple payment options including COD</li>
+                        <li>Display security badges and certifications</li>
+                        <li>Provide clear contact information and support</li>
+                        <li>Showcase customer reviews and testimonials</li>
+                        <li>Offer money-back guarantees</li>
+                    </ul>
+                    
+                    <h4>Logistics and Delivery Challenges</h4>
+                    <ul>
+                        <li>Partner with reliable local courier services</li>
+                        <li>Provide real-time order tracking</li>
+                        <li>Set clear delivery expectations</li>
+                        <li>Offer multiple delivery options (standard, express)</li>
+                        <li>Implement efficient returns and exchanges</li>
+                    </ul>
+                    
+                    <h3>Future Trends in Pakistani E-commerce</h3>
+                    <ul>
+                        <li>Voice commerce and AI-powered shopping assistants</li>
+                        <li>Augmented reality for virtual product trials</li>
+                        <li>Subscription-based business models</li>
+                        <li>Social commerce integration</li>
+                        <li>Sustainable and eco-friendly shopping options</li>
+                        <li>Cryptocurrency payment adoption</li>
+                    </ul>
+                    
+                    <p>Ready to scale your e-commerce business? <a href="contact.html" style="color: #00f5ff;">Get a comprehensive growth strategy</a> tailored to the Pakistani market.</p>
                 `
             }
         };
-
-        // Blog filtering functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const blogCards = document.querySelectorAll('.blog-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                // Filter blog cards
-                blogCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 100);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Blog post modal functionality
+        
+        // Blog post functions
         function openBlogPost(postId) {
             const post = blogPosts[postId];
-            if (!post) return;
-
-            const modal = document.getElementById('blog-modal');
-            const content = document.getElementById('blog-modal-content');
-
-            content.innerHTML = `
-                <div style="margin-bottom: 2rem;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
-                        <span style="background: rgba(0,245,255,0.1); color: #00f5ff; padding: 0.3rem 0.8rem; border-radius: 15px; border: 1px solid rgba(0,245,255,0.2);">${post.category}</span>
-                        <span>•</span>
-                        <span>${post.date}</span>
-                        <span>•</span>
-                        <span>${post.readTime}</span>
-                        <span>•</span>
-                        <span>By ${post.author}</span>
+            if (post) {
+                const modal = document.getElementById('blog-modal');
+                const content = document.getElementById('blog-modal-content');
+                
+                content.innerHTML = `
+                    <div class="blog-post-header" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <div class="blog-meta" style="margin-bottom: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                            <span class="blog-category" style="background: rgba(0,245,255,0.1); color: #00f5ff; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 1rem;">${post.category}</span>
+                            <span>${post.date}</span> • <span>${post.readTime}</span> • <span>By ${post.author}</span>
+                        </div>
+                        <h1 style="font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 700; line-height: 1.3; color: #ffffff; margin: 0;">${post.title}</h1>
                     </div>
-                    <h1 style="font-family: 'Orbitron', monospace; font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: #fff; line-height: 1.3;">${post.title}</h1>
-                </div>
-                <div style="color: rgba(255,255,255,0.9); line-height: 1.8; font-size: 1.1rem;">
-                    ${post.content}
-                </div>
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">Found this article helpful? Share it with your network:</p>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on LinkedIn</a>
-                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on Facebook</a>
-                        <a href="#" style="color: #00f5ff; text-decoration: none; padding: 0.5rem 1rem; background: rgba(0,245,255,0.1); border-radius: 20px; border: 1px solid rgba(0,245,255,0.2);">Share on Twitter</a>
+                    <div class="blog-post-content" style="color: rgba(255,255,255,0.9); line-height: 1.8; font-size: 1rem;">
+                        ${post.content}
                     </div>
-                </div>
-            `;
-
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
+                    <div class="blog-post-footer" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                        <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Found this article helpful? Share it with others!</p>
+                        <div class="share-buttons" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                            <a href="#" onclick="shareOnFacebook('${post.title}')" style="padding: 0.5rem 1rem; background: rgba(59,89,152,0.2); border: 1px solid rgba(59,89,152,0.3); border-radius: 8px; color: #3b5998; text-decoration: none; transition: all 0.3s ease;">📘 Facebook</a>
+                            <a href="#" onclick="shareOnTwitter('${post.title}')" style="padding: 0.5rem 1rem; background: rgba(29,161,242,0.2); border: 1px solid rgba(29,161,242,0.3); border-radius: 8px; color: #1da1f2; text-decoration: none; transition: all 0.3s ease;">🐦 Twitter</a>
+                            <a href="#" onclick="shareOnLinkedIn('${post.title}')" style="padding: 0.5rem 1rem; background: rgba(0,119,181,0.2); border: 1px solid rgba(0,119,181,0.3); border-radius: 8px; color: #0077b5; text-decoration: none; transition: all 0.3s ease;">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                `;
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
         }
-
+        
         function closeBlogPost() {
             const modal = document.getElementById('blog-modal');
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-
-        // Close modal when clicking outside
-        document.getElementById('blog-modal').addEventListener('click', (e) => {
-            if (e.target.id === 'blog-modal') {
-                closeBlogPost();
-            }
-        });
-
-        // Newsletter form submission
-        document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('.newsletter-btn');
-            const input = e.target.querySelector('.newsletter-input');
+        
+        // Social sharing functions
+        function shareOnFacebook(title) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(title);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+        }
+        
+        function shareOnTwitter(title) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        
+        function shareOnLinkedIn(title) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(title);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+        }
+        
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
             
-            btn.textContent = 'Subscribing...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.textContent = '✅ Subscribed!';
-                btn.style.background = 'linear-gradient(135deg, #00ff88, #00cc66)';
-                input.value = '';
-                
-                setTimeout(() => {
-                    btn.textContent = 'Subscribe Now';
-                    btn.disabled = false;
-                    btn.style.background = 'linear-gradient(135deg, #00f5ff, #ff00f5)';
-                }, 3000);
-            }, 1500);
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter blog cards
+                    blogCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
         });
-
+        
         // Header scroll effect
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
-
+        
         // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                });
             });
         });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        
+        // Newsletter form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            
+            newsletterForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // Simulate form submission
+                const submitBtn = this.querySelector('.newsletter-btn');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Subscribing...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.textContent = 'Subscribed! ✓';
+                    submitBtn.style.background = 'linear-gradient(135deg, #00ff00, #00cc00)';
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = 'linear-gradient(135deg, #00f5ff, #ff00f5)';
+                        this.reset();
+                    }, 2000);
+                }, 1500);
+                
+                // Here you would typically send the email to your backend
+                console.log('Newsletter subscription:', email);
+            });
+        });
+        
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('blog-modal');
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeBlogPost();
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeBlogPost();
                 }
             });
         });
-
-        // Intersection Observer for blog cards animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const blogCardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.blog-card');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
-
-        // Observe all blog cards for animation
-        blogCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-            blogCardObserver.observe(card);
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial state for animations
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+            
+            // Trigger animations after a short delay
+            setTimeout(() => {
+                animateOnScroll();
+            }, 200);
+            
+            // Animate on scroll
+            window.addEventListener('scroll', animateOnScroll);
         });
-
-        // Search functionality (if search input is added later)
-        function searchBlogPosts(query) {
-            const searchTerm = query.toLowerCase();
+        
+        // Search functionality (if you want to add it later)
+        function searchBlogPosts(searchTerm) {
+            const blogCards = document.querySelectorAll('.blog-card');
+            const searchLower = searchTerm.toLowerCase();
+            
             blogCards.forEach(card => {
                 const title = card.querySelector('.blog-card-title').textContent.toLowerCase();
                 const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
                 const category = card.querySelector('.blog-category').textContent.toLowerCase();
                 
-                if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+                if (title.includes(searchLower) || excerpt.includes(searchLower) || category.includes(searchLower)) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
                 }
             });
         }
-
-        // Keyboard navigation for modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const modal = document.getElementById('blog-modal');
-                if (modal.style.display === 'block') {
-                    closeBlogPost();
-                }
-            }
-        });
-
-        // Reading progress indicator (can be added to individual blog posts)
-        function updateReadingProgress() {
-            const article = document.querySelector('#blog-modal-content');
-            if (!article) return;
-            
-            const articleHeight = article.scrollHeight;
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const windowHeight = window.innerHeight;
-            const progress = (scrollTop / (articleHeight - windowHeight)) * 100;
-            
-            // Update progress bar if it exists
-            const progressBar = document.getElementById('reading-progress');
-            if (progressBar) {
-                progressBar.style.width = Math.min(progress, 100) + '%';
-            }
-        }
-
-        // Add scroll event listener for reading progress
-        window.addEventListener('scroll', updateReadingProgress);
-
-        // Social media sharing functionality
-        function shareOnSocial(platform, url, title) {
-            const encodedUrl = encodeURIComponent(url || window.location.href);
-            const encodedTitle = encodeURIComponent(title || document.title);
-            
-            let shareUrl = '';
-            
-            switch(platform) {
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-                    break;
-                case 'twitter':
-                    shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
-                    break;
-                case 'linkedin':
-                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-                    break;
-                case 'whatsapp':
-                    shareUrl = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
-                    break;
-            }
-            
-            if (shareUrl) {
-                window.open(shareUrl, '_blank', 'width=600,height=400');
-            }
-        }
-
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add loading state to blog cards
-            blogCards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('loaded');
-                }, index * 100);
-            });
-
-            // Add hover effects to filter buttons
-            filterBtns.forEach(btn => {
-                btn.addEventListener('mouseenter', () => {
-                    if (!btn.classList.contains('active')) {
-                        btn.style.transform = 'translateY(-2px)';
-                    }
-                });
-                
-                btn.addEventListener('mouseleave', () => {
-                    if (!btn.classList.contains('active')) {
-                        btn.style.transform = 'translateY(0)';
-                    }
-                });
-            });
-
-            // Add click tracking for analytics (placeholder)
-            blogCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const title = card.querySelector('.blog-card-title').textContent;
-                    const category = card.querySelector('.blog-category').textContent;
-                    
-                    // Analytics tracking would go here
-                    console.log(`Blog post clicked: ${title} (${category})`);
-                });
-            });
-
-            // Initialize tooltips for any elements with data-tooltip attribute
-            const tooltipElements = document.querySelectorAll('[data-tooltip]');
-            tooltipElements.forEach(element => {
-                element.addEventListener('mouseenter', showTooltip);
-                element.addEventListener('mouseleave', hideTooltip);
-            });
-        });
-
-        // Tooltip functions
-        function showTooltip(e) {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            tooltip.textContent = e.target.getAttribute('data-tooltip');
-            tooltip.style.cssText = `
-                position: absolute;
-                background: rgba(0, 0, 0, 0.9);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 8px;
-                font-size: 0.875rem;
-                z-index: 1000;
-                pointer-events: none;
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            `;
-            
-            document.body.appendChild(tooltip);
-            
-            const rect = e.target.getBoundingClientRect();
-            tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
-            
-            setTimeout(() => tooltip.style.opacity = '1', 100);
-            
-            e.target.tooltipElement = tooltip;
-        }
-
-        function hideTooltip(e) {
-            if (e.target.tooltipElement) {
-                e.target.tooltipElement.remove();
-                e.target.tooltipElement = null;
-            }
-        }
-
-        // Performance optimization: Lazy load blog post content
-        const lazyLoadBlogContent = () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const card = entry.target;
-                        // Load additional content or images if needed
-                        observer.unobserve(card);
-                    }
-                });
-            });
-
-            blogCards.forEach(card => observer.observe(card));
-        };
-
-        // Initialize lazy loading
-        lazyLoadBlogContent();
-
-        // Add copy to clipboard functionality for code blocks (if any)
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                // Show success message
-                const message = document.createElement('div');
-                message.textContent = 'Copied to clipboard!';
-                message.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: linear-gradient(135deg, #00f5ff, #ff00f5);
-                    color: black;
-                    padding: 1rem 2rem;
-                    border-radius: 10px;
-                    font-weight: 600;
-                    z-index: 10001;
-                    animation: slideIn 0.3s ease;
-                `;
-                
-                document.body.appendChild(message);
-                setTimeout(() => {
-                    message.remove();
-                }, 3000);
-            });
-        }
-
-        // Service Worker registration for offline functionality (optional)
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('SW registration failed: ', registrationError);
+        
+        // Performance optimization - Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
                     });
-            });
+                });
+                
+                const lazyImages = document.querySelectorAll('img[data-src]');
+                lazyImages.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        });
+        
+        // Dark mode toggle (optional feature)
+        function toggleTheme() {
+            const body = document.body;
+            const isDark = body.classList.contains('dark-theme');
+            
+            if (isDark) {
+                body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            }
         }
-
+        
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        });
+        
+        
+        
+        // Reading progress indicator
+        function updateReadingProgress() {
+            const modal = document.getElementById('blog-modal');
+            if (modal.style.display === 'block') {
+                const scrollTop = modal.scrollTop;
+                const scrollHeight = modal.scrollHeight - modal.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                
+                let progressBar = document.querySelector('.reading-progress');
+                if (!progressBar) {
+                    progressBar = document.createElement('div');
+                    progressBar.className = 'reading-progress';
+                    progressBar.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: ${scrollPercent}%;
+                        height: 3px;
+                        background: linear-gradient(135deg, #00f5ff, #ff00f5);
+                        z-index: 10002;
+                        transition: width 0.3s ease;
+                    `;
+                    document.body.appendChild(progressBar);
+                }
+                
+                progressBar.style.width = `${scrollPercent}%`;
+            }
+        }
+        
+        // Add scroll listener for reading progress
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('blog-modal');
+            modal.addEventListener('scroll', updateReadingProgress);
+        });
+        
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Intellex Blog loaded successfully!');
+            
+            // Initialize any additional features here
+            // Add analytics tracking
+            // Add error handling
+            // Add performance monitoring
+        });
+        
     </script>
-
-    <!-- Add CSS for additional animations -->
-    <style>
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .blog-card.loaded {
-            animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tooltip {
-            font-family: 'Exo 2', sans-serif;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 5px solid transparent;
-            border-top-color: rgba(0, 0, 0, 0.9);
-        }
-
-        /* Reading progress bar styles */
-        #reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #00f5ff, #ff00f5);
-            z-index: 9999;
-            transition: width 0.3s ease;
-        }
-
-        /* Enhanced mobile responsiveness */
-        @media (max-width: 320px) {
-            .blog-card {
-                margin: 0 5px;
-            }
-            
-            .blog-content {
-                padding: 1rem;
-            }
-            
-            .newsletter-container {
-                padding: 1.5rem;
-                margin: 0 10px;
-            }
-            
-            .filter-btn {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.75rem;
-            }
-        }
-    </style>
-
 </body>
 </html>

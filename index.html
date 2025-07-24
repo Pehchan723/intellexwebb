@@ -377,7 +377,105 @@
             color: #00f5ff;
             transform: translateY(-2px);
         }
-        
+        /* Mobile Logo Animation Fix - Add this to your existing CSS */
+
+.client-logos-container {
+    overflow: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+    height: 80px !important;
+    display: flex !important;
+    align-items: center !important;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent) !important;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent) !important;
+}
+
+.client-logos {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 4rem !important;
+    animation: moveLeftContinuous 30s linear infinite !important;
+    -webkit-animation: moveLeftContinuous 30s linear infinite !important;
+    white-space: nowrap !important;
+    will-change: transform !important;
+    min-width: max-content !important;
+    transform: translateZ(0) !important; /* Force hardware acceleration */
+}
+
+.client-logo {
+    padding: 1rem 2.5rem !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    display: inline-block !important;
+    min-width: auto !important;
+}
+
+.client-logo:hover {
+    background: rgba(0, 245, 255, 0.1) !important;
+    border-color: rgba(0, 245, 255, 0.4) !important;
+    color: #00f5ff !important;
+    transform: translateY(-2px) !important;
+}
+
+@keyframes moveLeftContinuous {
+    0% {
+        transform: translateX(0) translateZ(0);
+        -webkit-transform: translateX(0) translateZ(0);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0);
+        -webkit-transform: translateX(-50%) translateZ(0);
+    }
+}
+
+@-webkit-keyframes moveLeftContinuous {
+    0% {
+        -webkit-transform: translateX(0) translateZ(0);
+        transform: translateX(0) translateZ(0);
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateZ(0);
+        transform: translateX(-50%) translateZ(0);
+    }
+}
+
+/* Specific mobile fixes */
+@media screen and (max-width: 768px) {
+    .client-logos-container {
+        height: 60px !important; /* Slightly smaller on mobile */
+    }
+    
+    .client-logo {
+        padding: 0.75rem 1.5rem !important; /* Smaller padding on mobile */
+        font-size: 0.9rem !important;
+    }
+    
+    .client-logos {
+        gap: 2rem !important; /* Smaller gap on mobile */
+    }
+}
+
+/* Force hardware acceleration and prevent layout issues */
+.client-logos-container,
+.client-logos,
+.client-logo {
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-perspective: 1000px !important;
+    perspective: 1000px !important;
+}
         /* Sections */
         .section {
             padding: 5rem 0;

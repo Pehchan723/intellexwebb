@@ -670,11 +670,16 @@
                 padding: 1.5rem;
             }
             
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+           .footer-content {
+            grid-template-columns: 1fr; /* Single column footer */
+            gap: 2rem; /* Reduced gap */
+            text-align: center; /* Center align footer content */
         }
+        
+        .social-links {
+            justify-content: center; /* Center social links */
+        }
+    }
         
         /* Small mobile styles */
         @media (max-width: 480px) {

@@ -644,10 +644,15 @@
             }
             
             .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            grid-template-columns: 1fr; /* Single column footer */
+            gap: 2rem; /* Reduced gap */
+            text-align: center; /* Center align footer content */
         }
+        
+        .social-links {
+            justify-content: center; /* Center social links */
+        }
+    }
         
         @media (max-width: 480px) {
             .container {

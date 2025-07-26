@@ -386,7 +386,71 @@
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.95rem;
         }
+        .tab-container {
+    margin-top: 3rem;
+}
 
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 245, 255, 0.3);
+    border-radius: 25px;
+    padding: 12px 30px;
+    color: #00f5ff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', monospace;
+}
+
+.tab-button:hover {
+    background: rgba(0, 245, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #00f5ff, #ff00f5);
+    color: #000;
+    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.5);
+    transform: translateY(-3px);
+    border-color: #00f5ff;
+}
+
+/* Tab Content Display Control - MISSING */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+          
         .pricing-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -465,7 +529,73 @@
             color: #00f5ff;
             font-weight: bold;
         }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
 
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.stat-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: #00f5ff;
+    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00f5ff, #ff00f5);
+    border-radius: 20px 20px 0 0;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00f5ff, #ff00f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', monospace;
+    animation: countUp 2s ease-out;
+}
+
+.stat-label {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', monospace;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
         .testimonial-section {
             background: linear-gradient(135deg, rgba(255, 0, 245, 0.05), rgba(0, 0, 0, 0.95));
         }
@@ -849,7 +979,39 @@
             gap: 2rem; /* Reduced gap */
             text-align: center; /* Center align content */
         }
-        
+        @media (max-width: 768px) {
+    .tab-buttons {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .service-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pricing-card,
+    .stat-card {
+        margin: 0 15px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+}
         .form-grid {
             grid-template-columns: 1fr; /* Single column form */
         }
@@ -870,45 +1032,6 @@
         }
     }
     
-    /* Extra small devices */
-    @media (max-width: 480px) {
-        .hero-content {
-            padding: 1rem; /* Even smaller padding for very small screens */
-            margin: 0.25rem; /* Minimal margin */
-        }
-        
-        .hero-title {
-            font-size: clamp(1.8rem, 10vw, 3rem); /* Even better scaling for tiny screens */
-            margin-bottom: 1.5rem; /* Reduced margin */
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(0.9rem, 5vw, 1.2rem); /* Better scaling */
-            margin-bottom: 1.5rem; /* Reduced margin */
-        }
-        
-        .service-card {
-            padding: 1rem; /* Even smaller padding */
-        }
-        
-        .service-icon {
-            font-size: 2.5rem; /* Smaller icons */
-        }
-        
-        .service-title {
-            font-size: 1.3rem; /* Smaller service titles */
-        }
-        
-        .form-container {
-            padding: 1.5rem 1rem; /* Minimal padding */
-        }
-        
-        .btn-primary,
-        .btn-secondary {
-            padding: 0.875rem 1.25rem; /* Smaller button padding */
-            font-size: 1rem; /* Smaller font */
-        }
-    }
     
     /* Animation Keyframes */
     @keyframes fadeInUp {
@@ -1430,6 +1553,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Testimonials Section -->
     <section class="page-section testimonial-section">
